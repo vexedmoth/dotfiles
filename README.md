@@ -121,7 +121,7 @@ makepkg -si
 ## Other basic setup
 Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. 
 
-To enable features like this and other basic functions like turn the brightness up or down, check battery, configure graphics... we need to install the packages below:
+We are going to install the basic main packages before doing something else:
 
 - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
@@ -131,20 +131,28 @@ To enable features like this and other basic functions like turn the brightness 
 - [volumeicon](https://archlinux.org/packages/community/x86_64/volumeicon/) (volume control for the system tray)
 - [cbatticon](https://github.com/valr/cbatticon) (battery control for the system tray)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
-- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu)
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
 - [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
-- [ranger](https://wiki.archlinux.org/title/ranger) (filemanager)
-- [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger)
-- [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger)
+- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu) **Paste `rofi` directory in `~/.config/`**
+- [ranger](https://wiki.archlinux.org/title/ranger) (filemanager), [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger) **Paste `ranger` directory in `~/.config/`**
+- [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg) **Paste `picom` directory in `~/.config/`**
+- [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon) **Paste `dunst` directory in `~/.config/`**
+- [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids) **Paste `btop` directory in `~/.config/`**
+- [lsd](https://github.com/Peltoche/lsd) (ls with steroids) **Paste `lsd` directory in `~/.config/`**
+- [feh](https://wiki.archlinux.org/title/feh) (set wallpaper) 
 - [zathura](https://wiki.archlinux.org/title/zathura) (pdf document viewer) and [zathura-pdf-poppler](https://archlinux.org/packages/?name=zathura-pdf-poppler) (dependency)
 - [mpv](https://wiki.archlinux.org/title/mpv) (videoplayer)
-- 
+- [geeqie](https://archlinux.org/packages/extra/x86_64/geeqie/) (image viewer)
+- [xorg-xev](https://archlinux.org/packages/extra/x86_64/xorg-xev/) (print contents of X events)
+- [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
+- [mlocate](https://wiki.archlinux.org/title/locate) (find files by name)
+- [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
+- [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
+- [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
+- [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
 
-*PD: almost all packages can be installed with pacman package manager*
-
-
+*PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
 
 
@@ -152,15 +160,12 @@ To enable features like this and other basic functions like turn the brightness 
 
 
 ########################
-picom
-feh
-xinit
-uninstall lightdm
 ssh keys github
-fuentes
-rofi
-vscode
-brightnessctl, pamixer, acpi, xev, scrot, 
+fuentes en /usr/share/fonts
+qtile
+zsh
+gtk3
+
 
 ```zsh
 
