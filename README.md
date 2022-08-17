@@ -78,18 +78,21 @@ After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) 
 startx
 ```
 
-
-
 ## Other basic setup
-To enable other basic functions like turn the volume/brightness up or down, check battery, configure graphics... we need to install the packages below:
+Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. 
 
-- brightnessctl
-- pamixer
-- acpi
-- lm_sensors
-- scrot
-- nvidia-settings
-- 
+To enable features like this and other basic functions like turn the brightness up or down, check battery, configure graphics... we need to install the packages below:
+
+- [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
+- [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
+- [acpi](https://wiki.archlinux.org/title/ACPI_modules) (monitoring applications like battery, fans and thermal)
+- [lm_sensors](https://wiki.archlinux.org/title/lm_sensors) (provides tools and drivers for monitoring temperatures, voltage, and fans)
+- [batsignal](https://github.com/electrickite/batsignal) (battery daemon notifier)
+- [volumeicon](https://archlinux.org/packages/community/x86_64/volumeicon/) (volume control for the system tray)
+- [cbatticon](https://github.com/valr/cbatticon) (battery control for the system tray)
+- [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
+- [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
+
 
 
 
