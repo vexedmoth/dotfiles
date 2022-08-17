@@ -1,6 +1,12 @@
 # Arch Linux setup and configuration
 
-################################## archinstall
+## PRE-BUILD 
+- Configure [iwd](https://wiki.archlinux.org/title/iwd). Is a wireless daemon that works with network managers like systemd-networkd or NetworkManager
+- []()
+nvidia drivers propietary
+alacritty
+qtile
+git
 
 Right after a complete clean Arch based distro installation, we will follow this steps:
 
@@ -107,21 +113,25 @@ sudo systemctl enable betterlockscreen@vexedmoth.service
 6. Reboot system
 
 
+
+
 ## Install Paru AUR helper
 Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
 
 ```zsh
-sudo pacman -S git
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 ```
 
-## Other basic setup
-Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. 
+## GitHub ssh keys
+Since we will need to clone github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
 
-We are going to install the basic main packages before doing something else:
+[Steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+## Packages
+Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. So in this case, before paste qtile config from this repo into our new system config, or basically before doing something else, we need to install the following basic main packages:  
 
 - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
@@ -134,12 +144,6 @@ We are going to install the basic main packages before doing something else:
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
 - [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
-- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu) **Paste `rofi` directory in `~/.config/`**
-- [ranger](https://wiki.archlinux.org/title/ranger) (filemanager), [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger) **Paste `ranger` directory in `~/.config/`**
-- [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg) **Paste `picom` directory in `~/.config/`**
-- [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon) **Paste `dunst` directory in `~/.config/`**
-- [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids) **Paste `btop` directory in `~/.config/`**
-- [lsd](https://github.com/Peltoche/lsd) (ls with steroids) **Paste `lsd` directory in `~/.config/`**
 - [feh](https://wiki.archlinux.org/title/feh) (set wallpaper) 
 - [zathura](https://wiki.archlinux.org/title/zathura) (pdf document viewer) and [zathura-pdf-poppler](https://archlinux.org/packages/?name=zathura-pdf-poppler) (dependency)
 - [mpv](https://wiki.archlinux.org/title/mpv) (videoplayer)
@@ -147,24 +151,52 @@ We are going to install the basic main packages before doing something else:
 - [xorg-xev](https://archlinux.org/packages/extra/x86_64/xorg-xev/) (print contents of X events)
 - [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
 - [mlocate](https://wiki.archlinux.org/title/locate) (find files by name)
+- [lxappearance](https://archlinux.org/packages/community/x86_64/lxappearance/) (GTK theme switcher)
 - [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
+- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
+- [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
+- [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
+- [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon). **Paste `dunst` directory in `~/.config/`**
+- [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
+- [lsd](https://github.com/Peltoche/lsd) (ls with steroids). **Paste `lsd` directory in `~/.config/`**
+- [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
 
+## Add Fonts
+1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
+2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
+```zsh
+sudo fc-cache -f -v
 
-## 
+```
+
+## Change GTK theme
+By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme is Adwaita. Let's change it:
+
+1. Download Material-Black-BlueBerry GTK theme from [here](https://www.gnome-look.org/p/1316887)
+2. Unzip the .zip file
+3. Move the unzipped directory into our themes directory in the system
+```zsh
+sudo mv Material-Black-BlueBerry /usr/share/themes
+```
+4. Run GTK theme switcher and change it manually with a GUI
+```zsh
+lxappearance
+```
+
+
 
 
 ########################
-ssh keys github
-fuentes en /usr/share/fonts
 qtile
 zsh
-gtk3
+alacritty
+scripts (.local/bin)
 
 
 ```zsh
