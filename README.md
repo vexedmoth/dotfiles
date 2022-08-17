@@ -78,6 +78,17 @@ After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) 
 startx
 ```
 
+## Install Paru AUR helper
+Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
+
+```zsh
+sudo pacman -S git
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
 ## Other basic setup
 Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. 
 
@@ -91,21 +102,22 @@ To enable features like this and other basic functions like turn the brightness 
 - [volumeicon](https://archlinux.org/packages/community/x86_64/volumeicon/) (volume control for the system tray)
 - [cbatticon](https://github.com/valr/cbatticon) (battery control for the system tray)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
+- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu)
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
+- [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
+- [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
+- [ranger](https://wiki.archlinux.org/title/ranger) (filemanager)
+- [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger)
+- [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger)
+- [zathura](https://wiki.archlinux.org/title/zathura) (pdf document viewer) and [zathura-pdf-poppler](https://archlinux.org/packages/?name=zathura-pdf-poppler) (dependency)
+- [mpv](https://wiki.archlinux.org/title/mpv) (videoplayer)
+- 
+
+*PD: almost all packages can be installed with pacman package manager*
 
 
 
 
-## Install Paru AUR helper
-Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
-
-```zsh
-sudo pacman -S git
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
 
 ## 
 
