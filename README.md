@@ -78,6 +78,35 @@ After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) 
 startx
 ```
 
+## Add lock screen after suspend
+1. Install [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) package. 
+2. Paste `betterlockscreenrc` from this repo into `~/.config/`
+3. Link a lock wallpaper by doing
+```zsh
+betterlockscreen -u ~/Wallpapers/lockscreen.png
+```
+4. Create a file named `betterlockscreen@service` into `/etc/systemd/system/` and add this lines:
+```
+[Unit]
+Description=Lock X session using betterlockscreen for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/betterlockscreen -l
+ExecStartPost=/usr/bin/sleep 2
+
+[Install]
+WantedBy=sleep.target
+```
+5. Enable that service
+```zsh
+sudo systemctl enable betterlockscreen@vexedmoth.service
+```
+6. Reboot system
+
+
 ## Install Paru AUR helper
 Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
 
