@@ -210,20 +210,72 @@ sudo mv Material-Black-BlueBerry /usr/share/themes
 lxappearance
 ```
 
-## Terminal config
+## Terminal config (zsh + Oh My Zsh + p10k)
 
-1. Paste `alacritty` directory in `~/.config/` 
-2. 
+1. Paste `alacritty` directory in `~/.config/` to apply color configuration
 
-########################
-qtile
-zsh
-scripts (.local/bin)
-
-
+2. Install zsh and set as default shell
 ```zsh
-
+sudo pacman -S zsh
+chsh -s /bin/zsh
 ```
+
+3. Reboot and verify changes
+```zsh
+echo $SHELL
+```
+
+4. Install Oh My Zsh Framework
+```zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+5. Install Oh My Zsh plugins. Each of them should be cloned in `~/.oh_my_zsh/custom/plugins`
+
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+- [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
+
+6. Install PowerLevel10k theme for Oh My Zsh
+```zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+7. Paste `.p10k.zsh` and `.zshrc` in `~/`
+
+8. Set zsh in root by creating symbolic links. In vexedmoth user run:
+```zsh
+ln -s ~/.zshrc  /root/.zshrc
+```
+```zsh
+ln -s ~/.oh-my-zsh  /root/.oh-my-zsh
+```
+```zsh
+ln -s ~/.p10k.zsh  /root/.p10k.zsh
+```
+Then in root run:
+```zsh
+chsh -s /bin/zsh root
+```
+
+
+## Add Qtile config
+Paste `qtile` directory in `~/.config/`
+
+
+### Qtile Keybindings
+
+| Key                  | Action                     |
+| -------------------- | -------------------------- |
+| **mod + t**          | launch alacritty           |
+| **mod + k**          | next window                |
+| **mod + j**          | previous window            |
+| **mod + w**          | kill window                |
+| **mod + [12345...]** | go to workspace            |
+| **mod + ctrl + r**   | restart qtile              |
+| **mod + ctrl + q**   | logout qtile               |
+
 
 
 
