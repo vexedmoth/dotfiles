@@ -1,12 +1,31 @@
 # Arch Linux setup and configuration
 
 ## PRE-BUILD 
-- Configure [iwd](https://wiki.archlinux.org/title/iwd). Is a wireless daemon that works with network managers like systemd-networkd or NetworkManager
-- []()
-nvidia drivers propietary
-alacritty
-qtile
-git
+
+1. Configure [iwd](https://wiki.archlinux.org/title/iwd). Is a wireless daemon that works with [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). In this case, I prefer running a system daemon like systemd-networkd to manage networks. To start the client program run:
+```zsh
+iwctl
+```
+Once inside the client, we need to know how our network interface is named. 
+```
+device list
+```
+In my case, the interface is named as `wlan0`. So now, scan available near networks and list them
+```
+station wlan0 scan
+station wlan0 get-networks
+```
+Then, connect to the desired network and after that check if we are connected
+```
+station wlan0 connect MY_NETWORK
+station wlan0 show
+```
+2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
+3. Install propietary Nvidia Drivers as graphics driver
+4. Install [qtile](https://wiki.archlinux.org/title/Qtile) as DE/WM
+5. Install [alacritty](https://github.com/alacritty/alacritty) as the main terminal emulator
+6. Install [git](https://wiki.archlinux.org/title/git) as version control system
+
 
 Right after a complete clean Arch based distro installation, we will follow this steps:
 
@@ -125,6 +144,16 @@ cd paru
 makepkg -si
 ```
 
+## Add Fonts
+1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
+2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
+```zsh
+sudo fc-cache -f -v
+```
+
+## Add Scripts
+Paste `bin` directory in `~/.local/`
+
 ## GitHub ssh keys
 Since we will need to clone github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
 
@@ -167,14 +196,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
 
-## Add Fonts
-1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
-2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
-```zsh
-sudo fc-cache -f -v
-
-```
-
 ## Change GTK theme
 By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme is Adwaita. Let's change it:
 
@@ -189,13 +210,14 @@ sudo mv Material-Black-BlueBerry /usr/share/themes
 lxappearance
 ```
 
+## Terminal config
 
-
+1. Paste `alacritty` directory in `~/.config/` 
+2. 
 
 ########################
 qtile
 zsh
-alacritty
 scripts (.local/bin)
 
 
