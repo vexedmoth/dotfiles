@@ -193,14 +193,15 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
-- [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) music streaming
-- [telegram-desktop](https://wiki.archlinux.org/title/Telegram) chat app
-- [discord](https://wiki.archlinux.org/title/Discord) voice and chat app
-- [runjs-bin](https://aur.archlinux.org/packages/runjs-bin) js playground
-- [libreoffice-fresh](https://wiki.archlinux.org/title/LibreOffice) open source office app
-- [drawio-desktop](https://aur.archlinux.org/packages/drawio-desktop) diagram drawing app
-- [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) todoist app
-- [redshift](https://wiki.archlinux.org/title/redshift) color temperature ajust
+- [openrgb-bin](https://aur.archlinux.org/packages/openrgb-bin) (RGB keyboard control)
+- [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) (music streaming)
+- [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app)
+- [discord](https://wiki.archlinux.org/title/Discord) (voice and chat app)
+- [runjs-bin](https://aur.archlinux.org/packages/runjs-bin) (js playground)
+- [libreoffice-fresh](https://wiki.archlinux.org/title/LibreOffice) (open source office app)
+- [drawio-desktop](https://aur.archlinux.org/packages/drawio-desktop) (diagram drawing app)
+- [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) (todoist app)
+- [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
 
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
