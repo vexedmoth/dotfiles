@@ -192,6 +192,11 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
 - [lsd](https://github.com/Peltoche/lsd) (ls with steroids). **Paste `lsd` directory in `~/.config/`**
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
+- [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) music streaming
+- [telegram-desktop](https://wiki.archlinux.org/title/Telegram) chat app
+- [discord](https://wiki.archlinux.org/title/Discord) voice and chat app
+- [runjs-bin](https://aur.archlinux.org/packages/runjs-bin) js playground
+- [libreoffice-fresh](https://wiki.archlinux.org/title/LibreOffice) open source office app
 
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
