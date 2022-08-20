@@ -278,12 +278,12 @@ Paste `qtile` directory in `~/.config/`
 
 | Action 	                                      | Key Shortcut  	                            |
 |---------------------------------------------- |-------------------------------------------- |
-| _Launch Terminal_   	                        | `mod4 + t`  	                              |
-| _Launch Web Browser_  	                      | `mod4 + b`  	                              |
-| _Launch Rofi drun_                            | `mod4 + m`                                  |
-| _Close window_  	                            | `mod4 + w`  	                              |
-| _Switch window_                               | `mod4 + h,j,k,l`                            |
-| _Rotative switch window_                      | `mod4 + Alt`                                |
+| _Launch Terminal_   	                        | `mod1 + t`  	                              |
+| _Launch Web Browser_  	                      | `mod1 + b`  	                              |
+| _Launch Rofi drun_                            | `mod1 + m`                                  |
+| _Close window_  	                            | `mod1 + w`  	                              |
+| _Switch window_                               | `mod1 + h,j,k,l`                            |
+| _Rotative switch window_                      | `mod1 + space`                              |
 
 
 
