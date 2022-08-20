@@ -167,7 +167,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [acpi](https://wiki.archlinux.org/title/ACPI_modules) (monitoring applications like battery, fans and thermal)
 - [lm_sensors](https://wiki.archlinux.org/title/lm_sensors) (provides tools and drivers for monitoring temperatures, voltage, and fans)
 - [batsignal](https://github.com/electrickite/batsignal) (battery daemon notifier)
-- [volumeicon](https://archlinux.org/packages/community/x86_64/volumeicon/) (volume control for the system tray)
 - [cbatticon](https://github.com/valr/cbatticon) (battery control for the system tray)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
