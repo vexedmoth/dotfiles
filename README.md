@@ -151,6 +151,16 @@ makepkg -si
 sudo fc-cache -f -v
 ```
 
+## Change GTK theme and icons
+By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is Adwaita. Let's change it:
+
+1. Install [materia-gtk-theme](https://archlinux.org/packages/?name=materia-gtk-theme) GTK theme and [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/) GTK icons. (By default, themes will be stored automatically after installation in `/usr/share/themes` and icons in `/usr/share/icons`)
+2. Install [lxappearance](https://archlinux.org/packages/community/x86_64/lxappearance/) (GTK theme/icon switcher)
+3. Run it and change it manually with a GUI
+```zsh
+lxappearance
+```
+
 ## Add Scripts
 Paste `bin` directory in `~/.local/`
 
@@ -180,7 +190,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
 - [mlocate](https://wiki.archlinux.org/title/locate) (find files)
 - [fzf](https://wiki.archlinux.org/title/fzf) (find files)
-- [lxappearance](https://archlinux.org/packages/community/x86_64/lxappearance/) (GTK theme switcher)
 - [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
 - [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
@@ -204,15 +213,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
-
-## Change GTK theme and icons
-By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is Adwaita. Let's change it:
-
-1. Install [materia-gtk-theme](https://archlinux.org/packages/?name=materia-gtk-theme) GTK theme and [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/) GTK icons. (By default, themes will be stored automatically after installation in `/usr/share/themes` and icons in `/usr/share/icons`)
-2. Run GTK theme/icon switcher and change it manually with a GUI
-```zsh
-lxappearance
-```
 
 ## Terminal config (zsh + Oh My Zsh + p10k)
 
