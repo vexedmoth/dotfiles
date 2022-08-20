@@ -206,16 +206,11 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 *PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
 
 
-## Change GTK theme
-By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme is Adwaita. Let's change it:
+## Change GTK theme and icons
+By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is Adwaita. Let's change it:
 
-1. Download Material-Black-BlueBerry GTK theme from [here](https://www.gnome-look.org/p/1316887)
-2. Unzip the .zip file
-3. Move the unzipped directory into our themes directory in the system
-```zsh
-sudo mv Material-Black-BlueBerry /usr/share/themes
-```
-4. Run GTK theme switcher and change it manually with a GUI
+1. Install [materia-gtk-theme](https://archlinux.org/packages/?name=materia-gtk-theme) GTK theme and [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/) GTK icons. (By default, themes will be stored automatically after installation in `/usr/share/themes` and icons in `/usr/share/icons`)
+2. Run GTK theme/icon switcher and change it manually with a GUI
 ```zsh
 lxappearance
 ```
