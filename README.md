@@ -1,8 +1,37 @@
 # Arch Linux setup and configuration
 
-## PRE-BUILD 
 
-1. Configure [iwd](https://wiki.archlinux.org/title/iwd). Is a wireless daemon that works with [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). In this case, I prefer running a system daemon like systemd-networkd to manage networks. To start the client program run:
+
+
+
+```
+
+                           __                __  __  
+ _   _____  _  _____  ____/ /___ ___  ____  / /_/ /_ 
+| | / / _ \| |/_/ _ \/ __  / __ `__ \/ __ \/ __/ __ \ 
+| |/ /  __/>  </  __/ /_/ / / / / / / /_/ / /_/ / / /
+|___/\___/_/|_|\___/\__,_/_/ /_/ /_/\____/\__/_/ /_/  github.com/vexedmoth
+                                                     
+
+```
+
+
+
+
+---------------------------------------------------------------
+
+# _Basic Installation_
+
+
+Follow the [installation guide](https://wiki.archlinux.org/title/installation_guide) from Arch Wiki in order to get a basic and lightweight Arch structure. 
+
+
+
+# _Required Setup_ 
+
+Right after a complete and basic Arch based distro installation, follow the steps below:
+
+1. Configure [iwd](https://wiki.archlinux.org/title/iwd). It's a wireless daemon that can work with either [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). In this case, I prefer running a system daemon like systemd-networkd to manage networks. To start the client program run:
 ```zsh
 iwctl
 ```
@@ -21,13 +50,13 @@ station wlan0 connect MY_NETWORK
 station wlan0 show
 ```
 2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
-3. Install propietary Nvidia Drivers as graphics driver
+3. Install propietary [Nvidia Drivers](https://wiki.archlinux.org/title/NVIDIA) as graphics driver
 4. Install [qtile](https://wiki.archlinux.org/title/Qtile) as DE/WM
 5. Install [alacritty](https://github.com/alacritty/alacritty) as the main terminal emulator
 6. Install [git](https://wiki.archlinux.org/title/git) as version control system
 
 
-Right after a complete clean Arch based distro installation, we will follow this steps:
+# _Post-Installation_
 
 ## Add user to wheel group
 As root, we need to add vexedmoth user to the "wheel group" in order to grant sudo permissions. 
