@@ -179,6 +179,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [batsignal](https://github.com/electrickite/batsignal) (battery daemon notifier)
 - [python-pip](https://archlinux.org/packages/extra/any/python-pip/) (install python packages)
 - [python-psutil](https://archlinux.org/packages/community/x86_64/python-psutil/) (system utilities module for Python)
+- [python-iwlib](https://archlinux.org/packages/community/x86_64/python-iwlib/) (python module for iwlib)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
