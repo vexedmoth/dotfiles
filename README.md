@@ -221,6 +221,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [xorg-xev](https://archlinux.org/packages/extra/x86_64/xorg-xev/) (print contents of X events)
 - [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
 - [mlocate](https://wiki.archlinux.org/title/locate) (find files)
+- [rsync](https://wiki.archlinux.org/title/rsync) (copy/move files showing progress bar)
 - [fzf](https://wiki.archlinux.org/title/fzf) (find files)
 - [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
