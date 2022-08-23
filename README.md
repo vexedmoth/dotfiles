@@ -205,7 +205,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
 - [acpi](https://wiki.archlinux.org/title/ACPI_modules) (monitoring applications like battery, fans and thermal)
 - [lm_sensors](https://wiki.archlinux.org/title/lm_sensors) (provides tools and drivers for monitoring temperatures, voltage, and fans)
-- [batsignal](https://github.com/electrickite/batsignal) (battery daemon notifier)
 - [python-pip](https://archlinux.org/packages/extra/any/python-pip/) (install python packages)
 - [python-psutil](https://archlinux.org/packages/community/x86_64/python-psutil/) (system utilities module for Python)
 - [python-iwlib](https://archlinux.org/packages/community/x86_64/python-iwlib/) (python module for iwlib)
