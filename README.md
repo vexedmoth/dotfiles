@@ -303,17 +303,11 @@ chsh -s /bin/zsh root
 ## Add Qtile config
 Paste `qtile` directory in `~/.config/`
 
+Finally, make sure everything is working properly (remember to uncomment the last lines of `.xinitrc`).
 
-### Qtile Keybindings
+GL & HF!
 
-| Action 	                                      | Key Shortcut  	                            |
-|---------------------------------------------- |-------------------------------------------- |
-| _Launch Terminal_   	                        | `mod1 + t`  	                              |
-| _Launch Web Browser_  	                      | `mod1 + b`  	                              |
-| _Launch Rofi drun_                            | `mod1 + m`                                  |
-| _Close window_  	                            | `mod1 + w`  	                              |
-| _Switch window_                               | `mod1 + h,j,k,l`                            |
-| _Rotative switch window_                      | `mod1 + space`                              |
+
 
 
 
