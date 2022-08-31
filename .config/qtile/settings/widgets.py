@@ -160,7 +160,8 @@ primary_widgets = [
         fgcolor_high="#c43d10",
         crit=80,
         fgcolor_crit="#f70505",
-        format=' {temp}°C  '
+        format=' {temp}°C  ',
+        update_interval=5,
     ),
 
     # ------CPU: Load-----
@@ -170,7 +171,7 @@ primary_widgets = [
     widget.CPU(
         **base(bg='color5'),
         format=' {load_percent}%  ',
-        update_interval=3,
+        update_interval=5,
     ),
 
     # ------CPU: Memory-----
@@ -181,7 +182,7 @@ primary_widgets = [
         **base(bg='color5'),
         measure_mem='M',
         format=' {MemUsed:.0f} {mm}B  ',
-        update_interval=3,
+        update_interval=5,
 
     ),
 
