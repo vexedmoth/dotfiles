@@ -136,6 +136,16 @@ After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) 
 startx
 ```
 
+## Add Fonts
+1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
+2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
+```zsh
+sudo fc-cache -f -v
+```
+
+## Add Scripts
+Paste `bin` directory in `~/.local/`
+
 ## Add lock screen after suspend
 1. Install [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) package. 
 2. Paste `betterlockscreenrc` from this repo into `~/.config/`
@@ -166,6 +176,34 @@ sudo systemctl start betterlockscreen@vexedmoth.service
 
 ```
 _(If enabling and starting the service does not work, reboot system)_
+
+
+## Load openRGB keys after suspend
+RGB keys will automatically init at the background at system boot (already set in `xinitrc` file). But after suspend the color switch to default (red). We want to avoid this and load the same color always.  
+1. Install [openrgb-bin](https://aur.archlinux.org/packages/openrgb-bin) package
+2. Create a file named `openRGB@.service` into `/etc/systemd/system/` and add this lines:
+```
+[Unit]
+Description=Set openRGB color keys after suspend
+After=suspend.target
+
+[Service]
+User=%i
+Type=simple
+ExecStart=/home/vexedmoth/.local/bin/loadopenRGB
+
+[Install]
+WantedBy=suspend.target
+```
+3. Enable and start that service
+```zsh
+sudo systemctl enable openRGB@vexedmoth.service
+sudo systemctl start openRGB@vexedmoth.service
+
+```
+_(If enabling and starting the service does not work, reboot system)_
+
+
 
 
 ## Bluetooth service
@@ -246,12 +284,7 @@ cd paru
 makepkg -si
 ```
 
-## Add Fonts
-1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
-2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
-```zsh
-sudo fc-cache -f -v
-```
+
 
 ## Change GTK theme and icons
 By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is Adwaita. Let's change it:
@@ -262,9 +295,6 @@ By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is A
 ```zsh
 lxappearance
 ```
-
-## Add Scripts
-Paste `bin` directory in `~/.local/`
 
 ## GitHub ssh keys
 Since we will need to clone github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
@@ -306,7 +336,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
-- [openrgb-bin](https://aur.archlinux.org/packages/openrgb-bin) (RGB keyboard control)
 - [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) (music streaming)
 - [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app)
 - [discord](https://wiki.archlinux.org/title/Discord) (voice and chat app)
