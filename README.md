@@ -144,7 +144,7 @@ startx
 betterlockscreen -u ~/Wallpapers/lockscreen.png```zsh
 sudo systemctl enable betterlockscreen@vexedmoth.service
 ```
-```
+
 4. Create a file named `betterlockscreen@service` into `/etc/systemd/system/` and add this lines:
 ```
 [Unit]
