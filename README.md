@@ -144,7 +144,7 @@ startx
 betterlockscreen -u ~/Wallpapers/lockscreen.png
 ```
 
-4. Create a file named `betterlockscreen@service` into `/etc/systemd/system/` and add this lines:
+4. Create a file named `betterlockscreen@.service` into `/etc/systemd/system/` and add this lines:
 ```
 [Unit]
 Description=Lock X session using betterlockscreen for user %i
