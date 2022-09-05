@@ -40,18 +40,18 @@ Right after a complete and basic Arch based distro installation, follow the step
 iwctl
 ```
 Once inside the client, we need to know how our network interface is named. 
-```
-device list
+```zsh
+[iwd]# device list
 ```
 In my case, the interface is named as `wlan0`. So now, scan available near networks and list them
-```
-station wlan0 scan
-station wlan0 get-networks
+```zsh
+[iwd]# station wlan0 scan
+[iwd]# station wlan0 get-networks
 ```
 Then, connect to the desired network and after that check if we are connected
-```
-station wlan0 connect MY_NETWORK
-station wlan0 show
+```zsh
+[iwd]# station wlan0 connect MY_NETWORK
+[iwd]# station wlan0 show
 ```
 2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
 3. Install propietary [Nvidia Drivers](https://wiki.archlinux.org/title/NVIDIA) as graphics driver
@@ -141,7 +141,9 @@ startx
 2. Paste `betterlockscreenrc` from this repo into `~/.config/`
 3. Link a lock wallpaper by doing
 ```zsh
-betterlockscreen -u ~/Wallpapers/lockscreen.png
+betterlockscreen -u ~/Wallpapers/lockscreen.png```zsh
+sudo systemctl enable betterlockscreen@vexedmoth.service
+```
 ```
 4. Create a file named `betterlockscreen@service` into `/etc/systemd/system/` and add this lines:
 ```
@@ -164,6 +166,54 @@ sudo systemctl enable betterlockscreen@vexedmoth.service
 ```
 6. Reboot system
 
+
+## Bluetooth service
+In order to add bluetooth devices such as keyboard or headsets, we will need to install and enable a bluetooth service. In my case, we just want to add a bluetooth headset. Follow the steps below:
+
+1. Install [bluez](https://archlinux.org/packages/extra/x86_64/bluez/) package to provide Bluetooth protocol to our system and [bluez-utils](https://archlinux.org/packages/extra/x86_64/bluez-utils/) package to provide bluetoothctl utility.
+2. Make sure btusb kernel module is loaded
+```zsh
+lsmod | grep btusb
+```
+3. Check if bluetooth adapter is connected or blocked
+```zsh
+sudo rfkill list
+```
+4. Start and enable the service
+```zsh
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+```
+5. Pair and connect devices for the first time
+We need to start the client first by running
+```zsh
+bluetoothctl
+```
+
+Once the client is initialized, then we need to power on our bluetooth controller
+```zsh
+[bluetooth]# power on
+```
+
+Then, enable the agent and setting as default. This will allow to remember our paired devices every time we want to connect them.
+```zsh
+[bluetooth]# agent on
+[bluetooth]# default-agent
+```
+Scan the available devices and list them. Wait a few seconds until find all devices after scanning and then list the devices.
+```zsh
+[bluetooth]# scan on
+[bluetooth]# devices
+```
+
+Once we have located our device name, we'll copy its bluetooth MAC address (in my case, my headset address is 00:00:00:00:F3:31) and we'll run the following commands in order to finally connect
+```zsh
+[bluetooth]# trust 00:00:00:00:F3:31
+[bluetooth]# pair 00:00:00:00:F3:31
+[bluetooth]# connect 00:00:00:00:F3:31
+```
+
+6. From now on, we will be able to connect our devices automatically when switch them on, since our system is running bluetooth.service all the time. However, when we don't have any device connected, the service will keep running, and this consumes resources. To solve this, is as simple as enabling/disabling the service each time. 
 
 
 
