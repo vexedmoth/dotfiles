@@ -33,6 +33,8 @@ Follow the [installation guide](https://wiki.archlinux.org/title/installation_gu
 
 # _Required Setup_ 
 
+
+
 Right after a complete and basic Arch based distro installation, follow the steps below:
 
 1. Configure [iwd](https://wiki.archlinux.org/title/iwd). It's a wireless daemon that can work with either [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). In this case, I prefer running a system daemon like systemd-networkd to manage networks. To start the client program run:
@@ -60,7 +62,10 @@ Then, connect to the desired network and after that check if we are connected
 6. Install [git](https://wiki.archlinux.org/title/git) as version control system
 
 
+
 # _Post-Installation_
+
+
 
 ## Add user to wheel group
 As root, we need to add vexedmoth user to the "wheel group" in order to grant sudo permissions. 
@@ -74,6 +79,9 @@ Then open the `/etc/sudoers` file and uncomment the following line:
 %wheel ALL=(ALL) ALL
 ```
 
+
+
+
 ## Enable GRUB os-prober
 If we are using dual boot and the GRUB bootloader does not detect automatically other OS, then we need to install:
 - [os-prober](https://archlinux.org/packages/?name=os-prober) (detect other distros using a dual boot system)
@@ -84,6 +92,9 @@ After that, open the `/etc/default/grub` file and uncomment the following line:
 ```bash
 GRUB_DISABLE_OS_PROBER=false
 ```
+
+
+
 
 ## Enable Touchpad Tap
 Check if [libinput](https://wiki.archlinux.org/title/libinput) is installed in our system. If not, install it.
@@ -108,17 +119,8 @@ EndSection
 Reboot the system. 
 
 
-## Enable suspend 
-By default, the system may not suspend on lid close or powerkey press button. So we need to change config in `/etc/systemd/logind.conf` and uncomment this lines:
-```bash
-HandlePowerKey=suspend
-HandlePowerKeyLongPress=poweroff
-HandleLidSwitch=suspend
-HandleLidSwitchExternalPower=suspend
-HandleLidSwitchDocked=suspend
-LidSwitchIgnoreInhibited=yes
-```
-PD: The commented lines are the default setting
+
+
 
 ## Configure login manager
 If we want to start the system through the terminal without a login manager, we need to uninstall these packages:
@@ -136,6 +138,8 @@ After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) 
 startx
 ```
 
+
+
 ## Add Fonts
 1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
 2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
@@ -143,10 +147,31 @@ startx
 sudo fc-cache -f -v
 ```
 
+
+
 ## Add Scripts
+Custom scripts to automate tasks
 Paste `bin` directory in `~/.local/`
 
-## Add lock screen after suspend
+
+
+## Enable suspend 
+By default, the system may not suspend on lid close or powerkey press button. So we need to change config in `/etc/systemd/logind.conf` and uncomment this lines:
+```bash
+HandlePowerKey=suspend
+HandlePowerKeyLongPress=poweroff
+HandleLidSwitch=suspend
+HandleLidSwitchExternalPower=suspend
+HandleLidSwitchDocked=suspend
+LidSwitchIgnoreInhibited=yes
+```
+_PD: The commented lines are the default setting_
+
+
+
+
+
+## Enable lock screen after suspend
 1. Install [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) package. 
 2. Paste `betterlockscreenrc` from this repo into `~/.config/`
 3. Link a lock wallpaper by doing
@@ -178,6 +203,10 @@ sudo systemctl start betterlockscreen@vexedmoth.service
 _(If enabling and starting the service does not work, reboot system)_
 
 
+
+
+
+
 ## Load openRGB keys after suspend
 RGB keys will automatically init at the background at system boot (already set in `xinitrc` file). But after suspend the color switch to default (red). We want to avoid this and load the same color always.  
 1. Install [openrgb-bin](https://aur.archlinux.org/packages/openrgb-bin) package
@@ -206,7 +235,8 @@ _(If enabling and starting the service does not work, reboot system)_
 
 
 
-## Bluetooth service
+
+## Enable Bluetooth service
 In order to add bluetooth devices such as keyboard or headsets, we will need to install and enable a bluetooth service. In my case, we just want to add a bluetooth headset. Follow the steps below:
 
 1. Install [bluez](https://archlinux.org/packages/extra/x86_64/bluez/) package to provide Bluetooth protocol to our system and [bluez-utils](https://archlinux.org/packages/extra/x86_64/bluez-utils/) package to provide bluetoothctl utility.
@@ -274,6 +304,8 @@ systemctl status bluetooth.service
 
 
 
+
+
 ## Install Paru AUR helper
 Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
 
@@ -283,6 +315,8 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 ```
+
+
 
 
 
@@ -296,10 +330,18 @@ By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is A
 lxappearance
 ```
 
+
+
+
 ## GitHub ssh keys
 Since we will need to clone github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
 
 [Steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+
+
+
+
 
 ## Packages
 Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. So in this case, before paste qtile config from this repo into our new system config, or basically before doing something else, we need to install the following basic main packages:  
@@ -345,7 +387,12 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) (todoist app)
 - [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
 
-*PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github*
+_PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
+
+
+
+
+
 
 
 ## Terminal config (zsh + Oh My Zsh + p10k)
@@ -396,6 +443,11 @@ Then in root run:
 ```zsh
 chsh -s /bin/zsh root
 ```
+
+
+
+
+
 
 
 ## Add Qtile config
