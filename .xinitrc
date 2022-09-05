@@ -47,7 +47,7 @@ fi
 
 # My config
 
-feh --no-fehbg --bg-fill ~/Wallpapers/49.png &
+feh --no-fehbg --bg-fill ~/Wallpapers/47.jpg &
 
 picom --experimental-backends &
 
@@ -55,6 +55,6 @@ redshift -l 42.5:-1.4 -t 6500:3400 -m randr &
 
 dunst &
 
-openrgb -c FF00EE &
+loadopenRGB &
 
 exec qtile start

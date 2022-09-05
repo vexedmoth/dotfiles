@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#Probar con prueba3
+doc1=($(ls $1 | cut -d " " -f 1))
+doc2=($(ls $1 | cut -d " " -f 2))
+
+doc3=()
+
+for i in ${!doc1[@]}; do
+    if [ "${doc1[$i]}" = "${doc2[$i]}" ]; then
+        doc3+=("${doc1[$i]}")
+    else
+        concat=$(printf "${doc1[$i]}\%10s${doc2[$i]}\n")
+        doc3+=("$concat")
+    fi
+done
+
+for ((i=0; i<${#doc3[@]}; i++)); do
+    echo ${doc3[$i]}
+done
+
+echo ------------------------
+
+for ((i=0; i<${#doc3[@]}; i++)); do
+    path=$(printf "$1/%s${doc3[$i]}\n")
+    echo $path
+done
+
+
+
+
+

@@ -1,0 +1,74 @@
+#!/bin/bash
+
+#Variables estilos---------------------------------------------------------------------
+yellow='\033[0;33m'
+blue='\033[0;34m'
+green='\033[0;32m'
+magenta='\033[0;35m'
+clear='\033[0m'
+italics='\e[3m'
+
+
+#Funciones-----------------------------------------------------------------------------
+
+#Función conversor de bytes
+converter(){
+    if (($1 <= 1024)); then
+        output=$1
+        echo "$output B"
+    elif (($1 <= 1048576)); then
+        output=$(echo "$1 / 1024" | bc -l)
+        echo "$(python3 -c "print(round($output, 2))") KB"
+    elif (($1 <= 1073741824)); then
+        output=$(echo "$1 / 1048576" | bc -l)
+        echo "$(python3 -c "print(round($output, 2))") MB"
+    else
+        output=$(echo "$1 / 1073741824" | bc -l)
+        echo "$(python3 -c "print(round($output, 2))") GB"
+    fi
+}
+
+
+#Función recursiva recorre carpetas y directorios y suma bytes
+cuenta_bytes(){
+    documents=$(ls $1)
+    for i in $documents; do
+        path="$1/$i"
+        #Si es un fichero:
+        if [ -f "$path" ]; then
+            bytes=`ls -l $path | cut -d " " -f 5`
+            echo -e "Fichero ${yellow}${italics}$path${clear} ocupa $(converter $bytes)"
+            ((total += $bytes))
+        #Si no es un fichero --> es un directorio:
+        else
+            #Si el directorio tiene contenido en su interior:
+            if [ "$(ls -A $path)" ]; then
+                echo -e "Directorio ${blue}${italics}$path${clear} ocupa $(converter 4096) (intrínseco)"
+                ((total += 4096))
+                cuenta_bytes $path
+            #Si el directorio está vacio:
+            else
+                echo -e "Directorio ${blue}${italics}$path${clear} está vacio y ocupa $(converter 4096) (intrínseco)"
+                ((total += 4096))
+            fi
+        fi  
+    done
+}
+
+
+
+#Programa principal---------------------------------------------------------------------
+
+#Si el directorio que le pasamos no existe
+if [ ! -d $1 ]; then
+    echo "ERROR: El directorio no existe"
+    exit 1
+fi
+
+total=0
+
+cuenta_bytes $1
+
+echo -e "\nDentro de ${green}${italics}$1${clear} hay un total de $(converter $total)"
+echo -e "El directorio principal ${green}${italics}$1${clear} ocupa $(converter 4096) (intrínseco)"
+echo -e "\nTOTAL: $(converter $total) + $(converter 4096) = ${magenta}$(converter $(($total + 4096)))${clear}"

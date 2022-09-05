@@ -57,8 +57,8 @@ def workspaces():
             inactive=colors['inactive'],
             rounded=False,
             highlight_method='line',
-            urgent_alert_method='text',
-            urgent_border=colors['urgent'],
+            # urgent_alert_method='text',
+            # urgent_border=colors['grey'],
             this_current_screen_border=colors['light'],
             this_screen_border=colors['grey'],
             other_current_screen_border=colors['dark'],
@@ -142,9 +142,16 @@ primary_widgets = [
     widget.Wlan(
         **base(bg='color2'),
         interface='wlan0',
-        format='{essid} Q:{percent:2.0%} ',
-        disconnected_message='No signal',
+        format='{essid} Q:{percent:2.0%} | ',
+        disconnected_message='No WLAN signal | ',
         update_interval=5
+    ),
+
+    widget.Net(
+        **base(bg='color2'),
+        interface='enp4s0',
+        format=' {total} ',
+        update_interval=2,
     ),
 
     # ------CPU: Temperature-----

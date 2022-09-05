@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#pink
+#openrgb -c FF00EE
+
+#purple
+openrgb -c 5500FF
+
+#blue
+#openrgb -c 0000FF
+
+#red
+#openrgb -c FF0000
+
+#green
+#openrgb -c 00FF00
+
+#cian
+#openrgb -c 00FFFF
+
+#yellow
+#openrgb -c FFFF00
+
+#white
+#openrgb -c FFFFFF
+
+
+
+
+
