@@ -140,6 +140,17 @@ startx
 
 
 
+
+
+## Add Scripts
+Custom scripts to automate tasks.
+
+Paste `bin` directory in `~/.local/`
+
+
+
+
+
 ## Add Fonts
 1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
 2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
@@ -149,9 +160,6 @@ sudo fc-cache -f -v
 
 
 
-## Add Scripts
-Custom scripts to automate tasks
-Paste `bin` directory in `~/.local/`
 
 
 
@@ -296,7 +304,7 @@ sudo systemctl disable bluetooth.service
 sudo systemctl stop bluetooth.service
 ```
 
-_(If we don't know if the service is enabled or not, we can check by running:)_
+_We can check if the service is enabled/disabled by running:_
 ```zsh
 systemctl status bluetooth.service
 ```
