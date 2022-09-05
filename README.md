@@ -141,8 +141,7 @@ startx
 2. Paste `betterlockscreenrc` from this repo into `~/.config/`
 3. Link a lock wallpaper by doing
 ```zsh
-betterlockscreen -u ~/Wallpapers/lockscreen.png```zsh
-sudo systemctl enable betterlockscreen@vexedmoth.service
+betterlockscreen -u ~/Wallpapers/lockscreen.png
 ```
 
 4. Create a file named `betterlockscreen@service` into `/etc/systemd/system/` and add this lines:
@@ -164,7 +163,7 @@ WantedBy=sleep.target
 ```zsh
 sudo systemctl enable betterlockscreen@vexedmoth.service
 ```
-6. Reboot system
+6. Reboot the system
 
 
 ## Bluetooth service
@@ -179,7 +178,7 @@ lsmod | grep btusb
 ```zsh
 sudo rfkill list
 ```
-4. Start and enable the service
+4. Enable and start the service
 ```zsh
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
@@ -213,7 +212,25 @@ Once we have located our device name, we'll copy its bluetooth MAC address (in m
 [bluetooth]# connect 00:00:00:00:F3:31
 ```
 
-6. From now on, we will be able to connect our devices automatically when switch them on, since our system is running bluetooth.service all the time. However, when we don't have any device connected, the service will keep running, and this consumes resources. To solve this, is as simple as enabling/disabling the service each time. 
+6. From now on, we will be able to connect our devices automatically when switch them on, since our system is running bluetooth.service all the time. However, when we don't have any device connected, the service will keep running, and this consumes resources. To solve this, is as simple as enabling/disabling the service each time.
+
+- Enabling service
+```zsh
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+```
+
+- Disabling service
+```zsh
+sudo systemctl disable bluetooth.service
+sudo systemctl stop bluetooth.service
+```
+
+_(If we don't know if the service is enabled or not, we can check by running:)_
+```zsh
+systemctl status bluetooth.service
+```
+
 
 
 
