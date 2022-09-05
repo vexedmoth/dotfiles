@@ -159,11 +159,13 @@ ExecStartPost=/usr/bin/sleep 2
 [Install]
 WantedBy=sleep.target
 ```
-5. Enable that service
+5. Enable and start that service
 ```zsh
 sudo systemctl enable betterlockscreen@vexedmoth.service
+sudo systemctl start betterlockscreen@vexedmoth.service
+
 ```
-6. Reboot the system
+_(If enabling and starting the service does not work, reboot system)_
 
 
 ## Bluetooth service
