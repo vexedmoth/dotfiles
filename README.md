@@ -263,7 +263,14 @@ ExecStart=/home/vexedmoth/.local/bin/loadopenRGB
 [Install]
 WantedBy=suspend.target
 ```
-3. Enable and start that service
+3. Add script binaries to PATH in `.bashrc` in order to run `loadopenRGB` script (this will be temporary until we set up zsh configuration later).
+```zsh
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+```
+
+4. Enable and start that service
 ```zsh
 sudo systemctl enable openRGB@vexedmoth.service
 sudo systemctl start openRGB@vexedmoth.service
