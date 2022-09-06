@@ -68,6 +68,11 @@ Then, connect to the desired network and after that check if we are connected
 
 
 ## Add user to wheel group
+First we need to log as root user
+```zsh
+su -
+```
+
 As root, we need to add vexedmoth user to the "wheel group" in order to grant sudo permissions. 
 
 ```zsh
@@ -82,15 +87,41 @@ Then open the `/etc/sudoers` file and uncomment the following line:
 
 
 
+
+## Install Paru AUR helper
+Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
+
+```zsh
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+
+
+
+
 ## Enable GRUB os-prober
 If we are using dual boot and the GRUB bootloader does not detect automatically other OS, then we need to install:
 - [os-prober](https://archlinux.org/packages/?name=os-prober) (detect other distros using a dual boot system)
 - [ntfs-3g](https://wiki.archlinux.org/title/NTFS-3G) (read NTFS files like UEFI boot file from other OS like Windows)
+- [update-grub](https://aur.archlinux.org/packages/update-grub) (simple wrapper around grub-mkconfig)
 
-After that, open the `/etc/default/grub` file and uncomment the following line:
+Open the `/etc/default/grub` file and uncomment the following line:
 
 ```bash
 GRUB_DISABLE_OS_PROBER=false
+```
+
+Besides we can take the opportunity to change the timeout by changing the line:
+```bash
+GRUB_TIMEOUT=60
+```
+
+After that, we need to update grub by running
+```bash
+sudo update-grub
 ```
 
 
@@ -309,20 +340,6 @@ _We can check if the service is enabled/disabled by running:_
 systemctl status bluetooth.service
 ```
 
-
-
-
-
-
-## Install Paru AUR helper
-Standard pacman wrapping [AUR](https://wiki.archlinux.org/title/Arch_User_Repository) helper that allows to get access to the Arch User Repository. 
-
-```zsh
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
 
 
 
