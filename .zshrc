@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh" 
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -136,9 +136,17 @@ fi
 
 # Bindkeys and aliases
 bindkey '^[s' autosuggest-accept
-alias ls='lsd'
-alias lf='ranger'
+alias fm='ranger'
 alias bat='bat --style=plain --paging=never'
+
+alias ls='exa --color=always --icons --group-directories-first'  
+alias la='exa -a --color=always --icons --group-directories-first'   
+alias ll='exa -l --color=always --icons --group-directories-first' 
+alias lla='exa -la --color=always --icons --group-directories-first' 
+alias lt='exa -aT --color=always --icons --group-directories-first'    
+alias l.='exa -a | egrep "^\."'
+
+
 
 
 
