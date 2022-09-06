@@ -406,12 +406,12 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
-- [lsd](https://github.com/Peltoche/lsd) (ls with steroids). _It can log an error during installation bcz `awesome-terminal-fonts` are already installed in the system. Just delete `awesome-terminal-fonts` from `/usr/share/fonts` and try to reinstall lsd._ **Paste `lsd` directory in `~/.config/`**
+- [lsd](https://github.com/Peltoche/lsd) (ls with steroids). _It can log an error during installation bcz `awesome-terminal-fonts` fonts are already installed in the system. Just delete `awesome-terminal-fonts` from `/usr/share/fonts` and try to reinstall lsd._ **Paste `lsd` directory in `~/.config/`**
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
 - [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) (music streaming)
-- [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app)
+- [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app). _It can log an error during installation bcz `TTF` fonts are already installed in the system. Just delete `TTF` from `/usr/share/fonts` and try to reinstall telegram-desktop._
 - [discord](https://wiki.archlinux.org/title/Discord) (voice and chat app)
 - [runjs-bin](https://aur.archlinux.org/packages/runjs-bin) (js playground)
 - [libreoffice-fresh](https://wiki.archlinux.org/title/LibreOffice) (open source office app)
