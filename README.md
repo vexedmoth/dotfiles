@@ -368,6 +368,7 @@ Since we will need to clone github repositories later on, let's generate ssh key
 ## Packages
 Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. So in this case, before paste qtile config from this repo into our new system config, or basically before doing something else, we need to install the following basic main packages:  
 
+- [pacman-contrib](https://archlinux.org/packages/community/x86_64/pacman-contrib/) (pacman tools and scripts)
 - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
 - [acpi](https://wiki.archlinux.org/title/ACPI_modules) (monitoring applications like battery, fans and thermal)
@@ -390,13 +391,13 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [rsync](https://wiki.archlinux.org/title/rsync) (copy/move files showing progress bar)
 - [fzf](https://wiki.archlinux.org/title/fzf) (find files)
 - [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
+- [exa](https://archlinux.org/packages/community/x86_64/exa/) (ls with steroids).
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
 - [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
 - [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
 - [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
-- [lsd](https://github.com/Peltoche/lsd) (ls with steroids). **Paste `lsd` directory in `~/.config/`**
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
