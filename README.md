@@ -102,6 +102,27 @@ makepkg -si
 
 
 
+
+## GitHub ssh keys
+Since we will need to clone our dotfiles from this repo and other github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
+
+[Steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+Then we can clone this repo via SSH. 
+```zsh
+git clone git@github.com:vexedmoth/dotfiles.git
+```
+
+**WARNING**:
+If we clone via HTTPS, later we'll not be able to push changes via SSH, we would clone via HTTPS instead.
+
+
+
+
+
+
+
+
 ## Enable GRUB os-prober
 If we are using dual boot and the GRUB bootloader does not detect automatically other OS, then we need to install:
 - [os-prober](https://archlinux.org/packages/?name=os-prober) (detect other distros using a dual boot system)
@@ -351,14 +372,6 @@ By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is A
 ```zsh
 lxappearance
 ```
-
-
-
-
-## GitHub ssh keys
-Since we will need to clone github repositories later on, let's generate ssh keys and add them to GitHub. (I prefer this option over via https). 
-
-[Steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 
