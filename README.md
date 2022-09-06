@@ -182,16 +182,6 @@ Paste `bin` directory in `~/.local/`
 
 
 
-## Add Fonts
-1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
-2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
-```zsh
-sudo fc-cache -f -v
-```
-
-
-
-
 
 
 ## Enable suspend 
@@ -421,6 +411,17 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 
 _PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
 
+
+
+
+
+
+## Add Fonts
+1. Paste the `fonts` directory in `/usr/share/`. Delete the previous existing fonts directory then.
+2. Refresh the font cache. This is necessary for those programs that uses fontconfig to list available fonts on the system.
+```zsh
+sudo fc-cache -f -v
+```
 
 
 
