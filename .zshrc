@@ -137,7 +137,7 @@ fi
 # Bindkeys and aliases
 bindkey '^[s' autosuggest-accept
 alias fm='ranger'
-alias bat='bat --style=plain --paging=never'
+alias cat='bat --style=plain --paging=never'
 
 alias ls='exa --color=always --icons --group-directories-first'  
 alias la='exa -a --color=always --icons --group-directories-first'   
@@ -145,6 +145,10 @@ alias ll='exa -l --color=always --icons --group-directories-first'
 alias lla='exa -la --color=always --icons --group-directories-first' 
 alias lt='exa -aT --color=always --icons --group-directories-first'    
 alias l.='exa -a | egrep "^\."'
+
+
+
+
 
 
 

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#Path variables
+DOTFILES_PATH="$HOME/Repos/dotfiles"
+
+#Pull every change from GitHub
+git -C $DOTFILES_PATH pull
+
+#Delete all files from "dotfiles" dir except "Screenshots", "README.md" and ".git"
+find $DOTFILES_PATH -mindepth 1 -not \( -name 'Screenshots' -prune -or -name '.git' -prune -or -name 'README.md' \) -exec rm -rf '{}' \;
+
+#Update ".config" dir
+mkdir $DOTFILES_PATH/.config
+cp -r $HOME/.config/alacritty $DOTFILES_PATH/.config
+cp -r $HOME/.config/btop $DOTFILES_PATH/.config
+cp -r $HOME/.config/dunst $DOTFILES_PATH/.config
+cp -r $HOME/.config/neofetch $DOTFILES_PATH/.config
+cp -r $HOME/.config/picom $DOTFILES_PATH/.config
+cp -r $HOME/.config/qtile $DOTFILES_PATH/.config
+cp -r $HOME/.config/ranger $DOTFILES_PATH/.config
+cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
+cp -r $HOME/.config/betterlockscreenrc $DOTFILES_PATH/.config
+
+#Update rest of the files
+cp -r $HOME/.local/bin $DOTFILES_PATH
+cp -r /usr/share/fonts $DOTFILES_PATH
+cp -r $HOME/.p10k.zsh $DOTFILES_PATH
+cp -r $HOME/.zshrc $DOTFILES_PATH
+cp -r $HOME/.xinitrc $DOTFILES_PATH
+
+#Add commit and push
+git -C $DOTFILES_PATH add .
+git -C $DOTFILES_PATH commit -m "update dotfiles"
+git -C $DOTFILES_PATH push
+
+
+
+
+
