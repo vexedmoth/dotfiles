@@ -1,27 +1,55 @@
 #!/bin/bash
 
-#Path variables
-DOCUMENTS_PATH="$HOME/Repos/documents"
+password=""
 
-#Pull every change from GitHub
-git -C $DOCUMENTS_PATH pull
+pass_var="Type password to update dotfiles: "
 
-#Delete all files from "documents" dir except "WebFundamentals", "bookmarks.html" and ".git"
-find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune -or -name 'WebFundamentals' -prune -or -name 'bookmarks.html' \) -exec rm -rf '{}' \;
+# This will take password letter by letter
+while IFS= read -p "$pass_var" -r -s -n 1 letter
+do
+    # If you press enter then the condition is true and it exit the loop
+    if [[ $letter == $'\0' ]]
+    then
+        if [[ $password == "123" ]]; then
+            echo
+            #Path variables
+            DOCUMENTS_PATH="$HOME/Repos/documents"
 
-#Update
-cp -r $HOME/Wallpapers $DOCUMENTS_PATH
-cp -r $HOME/Documents/bit4 $DOCUMENTS_PATH
-cp -r $HOME/Documents/Cursos $DOCUMENTS_PATH
-cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
-cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
-cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
+            #Pull every change from GitHub
+            git -C $DOCUMENTS_PATH pull
+
+            #Delete all files from "documents" dir except "WebFundamentals", "bookmarks.html" and ".git"
+            find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune -or -name 'WebFundamentals' -prune -or -name 'bookmarks.html' \) -exec rm -rf '{}' \;
+
+            #Update
+            cp -r $HOME/Wallpapers $DOCUMENTS_PATH
+            cp -r $HOME/Documents/bit4 $DOCUMENTS_PATH
+            cp -r $HOME/Documents/Cursos $DOCUMENTS_PATH
+            cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
+            cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
+            cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
 
 
-#Add commit and push
-git -C $DOCUMENTS_PATH add .
-git -C $DOCUMENTS_PATH commit -m "update documents"
-git -C $DOCUMENTS_PATH push
+            #Add commit and push
+            git -C $DOCUMENTS_PATH add .
+            git -C $DOCUMENTS_PATH commit -m "update documents"
+            git -C $DOCUMENTS_PATH push
+
+        else
+            echo
+            echo -n "Password is not correct"
+            exit 1
+        fi
+        break
+    fi
+    
+    # The letter will store in password variable
+    password="$password$letter"
+    
+    # In place of password the asterisk (*) will printed
+    pass_var="*"
+done
+
 
 
 
