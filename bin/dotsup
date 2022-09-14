@@ -1,37 +1,66 @@
 #!/bin/bash
 
-#Path variables
-DOTFILES_PATH="$HOME/Repos/dotfiles"
+password=""
 
-#Pull every change from GitHub
-git -C $DOTFILES_PATH pull
+pass_var="Type password to update dotfiles: "
 
-#Delete all files from "dotfiles" dir except "Screenshots", "README.md" and ".git"
-find $DOTFILES_PATH -mindepth 1 -not \( -name 'Screenshots' -prune -or -name '.git' -prune -or -name 'README.md' \) -exec rm -rf '{}' \;
+# This will take password letter by letter
+while IFS= read -p "$pass_var" -r -s -n 1 letter
+do
+    # If you press enter then the condition is true and it exit the loop
+    if [[ $letter == $'\0' ]]
+    then
+        if [[ $password == "123" ]]; then
+            echo
+            #Path variables
+            DOTFILES_PATH="$HOME/Repos/dotfiles"
 
-#Update ".config" dir
-mkdir $DOTFILES_PATH/.config
-cp -r $HOME/.config/alacritty $DOTFILES_PATH/.config
-cp -r $HOME/.config/btop $DOTFILES_PATH/.config
-cp -r $HOME/.config/dunst $DOTFILES_PATH/.config
-cp -r $HOME/.config/neofetch $DOTFILES_PATH/.config
-cp -r $HOME/.config/picom $DOTFILES_PATH/.config
-cp -r $HOME/.config/qtile $DOTFILES_PATH/.config
-cp -r $HOME/.config/ranger $DOTFILES_PATH/.config
-cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
-cp -r $HOME/.config/betterlockscreenrc $DOTFILES_PATH/.config
+            #Pull every change from GitHub
+            git -C $DOTFILES_PATH pull
 
-#Update rest of the files
-cp -r $HOME/.local/bin $DOTFILES_PATH
-cp -r /usr/share/fonts $DOTFILES_PATH
-cp -r $HOME/.p10k.zsh $DOTFILES_PATH
-cp -r $HOME/.zshrc $DOTFILES_PATH
-cp -r $HOME/.xinitrc $DOTFILES_PATH
+            #Delete all files from "dotfiles" dir except "Screenshots", "README.md" and ".git"
+            find $DOTFILES_PATH -mindepth 1 -not \( -name 'Screenshots' -prune -or -name '.git' -prune -or -name 'README.md' \) -exec rm -rf '{}' \;
 
-#Add commit and push
-git -C $DOTFILES_PATH add .
-git -C $DOTFILES_PATH commit -m "update dotfiles"
-git -C $DOTFILES_PATH push
+            #Update ".config" dir
+            mkdir $DOTFILES_PATH/.config
+            cp -r $HOME/.config/alacritty $DOTFILES_PATH/.config
+            cp -r $HOME/.config/btop $DOTFILES_PATH/.config
+            cp -r $HOME/.config/dunst $DOTFILES_PATH/.config
+            cp -r $HOME/.config/neofetch $DOTFILES_PATH/.config
+            cp -r $HOME/.config/picom $DOTFILES_PATH/.config
+            cp -r $HOME/.config/qtile $DOTFILES_PATH/.config
+            cp -r $HOME/.config/ranger $DOTFILES_PATH/.config
+            cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
+            cp -r $HOME/.config/betterlockscreenrc $DOTFILES_PATH/.config
+
+            #Update rest of the files
+            cp -r $HOME/.local/bin $DOTFILES_PATH
+            cp -r /usr/share/fonts $DOTFILES_PATH
+            cp -r $HOME/.p10k.zsh $DOTFILES_PATH
+            cp -r $HOME/.zshrc $DOTFILES_PATH
+            cp -r $HOME/.xinitrc $DOTFILES_PATH
+
+            #Add commit and push
+            git -C $DOTFILES_PATH add .
+            git -C $DOTFILES_PATH commit -m "update dotfiles"
+            git -C $DOTFILES_PATH push
+        else
+            echo
+            echo -n "Password is not correct"
+            exit 1
+        fi
+        break
+    fi
+    
+    # The letter will store in password variable
+    password="$password$letter"
+    
+    # In place of password the asterisk (*) will printed
+    pass_var="*"
+done
+
+
+
 
 
 
