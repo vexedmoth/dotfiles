@@ -392,6 +392,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [python-dbus-next](https://archlinux.org/packages/community/any/python-dbus-next/) (python dbus library)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
 - [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
+- [nvm](https://aur.archlinux.org/packages/nvm) (Node Version Manager)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
 - [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
 - [feh](https://wiki.archlinux.org/title/feh) (set wallpaper) 
