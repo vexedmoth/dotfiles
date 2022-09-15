@@ -88,6 +88,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Read and execute nvm start script to run nvm. 
+source /usr/share/nvm/init-nvm.sh
+
 
 # User configuration
 
@@ -145,6 +148,8 @@ alias ll='exa -l --color=always --icons --group-directories-first'
 alias lla='exa -la --color=always --icons --group-directories-first' 
 alias lt='exa -aT --color=always --icons --group-directories-first'    
 alias l.='exa -a | egrep "^\."'
+
+
 
 
 
