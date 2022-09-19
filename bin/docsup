@@ -2,7 +2,7 @@
 
 password=""
 
-pass_var="Type password to update dotfiles: "
+pass_var="Type password to update documents: "
 
 # This will take password letter by letter
 while IFS= read -p "$pass_var" -r -s -n 1 letter
