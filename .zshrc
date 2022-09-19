@@ -86,6 +86,7 @@ plugins=(
 
 )
 
+# Read and execute oh-my-zsh start script
 source $ZSH/oh-my-zsh.sh
 
 # Read and execute nvm start script to run nvm. 
