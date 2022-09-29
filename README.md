@@ -415,6 +415,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
 - [brave-bin](https://aur.archlinux.org/packages/brave-bin) (private web browser)
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
+- [apache-netbeans](https://aur.archlinux.org/packages/apache-netbeans) (Java IDE) 
 - [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) (music streaming)
 - [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app). 
 - [discord](https://wiki.archlinux.org/title/Discord) (voice and chat app)
