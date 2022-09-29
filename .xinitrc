@@ -47,7 +47,7 @@ fi
 
 # My config
 
-feh --no-fehbg --bg-fill ~/Wallpapers/47.jpg &
+feh --no-fehbg --bg-fill ~/Wallpapers/12.jpg &
 
 picom --experimental-backends &
 
