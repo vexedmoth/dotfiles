@@ -8,9 +8,9 @@
   "inactive": ["#4c566a", "#4c566a"],
   "urgent": ["#F07178", "#F07178"],
   "color1": ["#a151d3", "#a151d3"],
-  "color2": ["#F07178", "#F07178"],
-  "color3": ["#fb9f7f", "#fb9f7f"],
-  "color4": ["#ffd47e", "#ffd47e"],
-  "color5": ["#92a0ad", "#92a0ad"],
-  "color6": ["#02d1fa", "#02d1fa"]
+  "color2": ["#b280d1", "#b280d1"],
+  "color3": ["#c0a9cf", "#c0a9cf"],
+  "color4": ["#dad5e0", "#dad5e0"],
+  "color5": ["#a151d3", "#a151d3"],
+  "archlogo": ["#02d1fa", "#02d1fa"]
 }

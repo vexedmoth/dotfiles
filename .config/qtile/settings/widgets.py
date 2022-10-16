@@ -82,7 +82,7 @@ primary_widgets = [
 
     # ------Arch LOGO------
 
-    icon(fg="color6", bg="dark", text='  ', fontsize=26), 
+    icon(fg="archlogo", bg="dark", text='  ', fontsize=26), 
 
     powerline2('dark', 'color1'),
 
