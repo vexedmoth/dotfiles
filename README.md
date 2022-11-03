@@ -417,6 +417,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin) (code editor)
 - [apache-netbeans](https://aur.archlinux.org/packages/apache-netbeans) (Java IDE. Need to install JDK 17 LTS) 
 - [eclipse-jee](https://aur.archlinux.org/packages/eclipse-jee) (Java IDE. Need to install JDK 17 LTS)
+- [postman-bin](https://aur.archlinux.org/packages/postman-bin) Test API
 - [spotify](https://aur.archlinux.org/packages/spotify#comment-747857) (music streaming)
 - [telegram-desktop](https://wiki.archlinux.org/title/Telegram) (chat app). 
 - [discord](https://wiki.archlinux.org/title/Discord) (voice and chat app)
