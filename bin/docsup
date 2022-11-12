@@ -24,7 +24,7 @@ do
             #Update
             cp -r $HOME/Wallpapers $DOCUMENTS_PATH
             cp -r $HOME/Documents/bit4 $DOCUMENTS_PATH
-            cp -r $HOME/Documents/Cursos $DOCUMENTS_PATH
+            cp -r $HOME/Documents/Learn $DOCUMENTS_PATH
             cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
             cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
