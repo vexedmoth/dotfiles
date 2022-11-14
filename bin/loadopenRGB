@@ -4,10 +4,10 @@
 #openrgb -c FF00EE
 
 #purple
-openrgb -c 5500FF
+#openrgb -c 5500FF
 
 #blue
-#openrgb -c 0000FF
+openrgb -c 0000FF
 
 #red
 #openrgb -c FF0000
