@@ -49,7 +49,7 @@ fi
 
 feh --no-fehbg --bg-fill ~/Wallpapers/archsimple.png &
 
-picom --experimental-backends &
+picom &
 
 redshift -l 42.5:-1.4 -t 6500:3400 -m randr &
 
