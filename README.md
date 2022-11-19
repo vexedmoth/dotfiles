@@ -426,6 +426,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [drawio-desktop](https://aur.archlinux.org/packages/drawio-desktop) (diagram drawing app)
 - [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) (todoist app)
 - [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
+- [mysql](https://wiki.archlinux.org/title/MySQL) (RDBMS)
 
 _PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
 
