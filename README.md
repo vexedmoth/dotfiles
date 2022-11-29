@@ -401,6 +401,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [geeqie](https://archlinux.org/packages/extra/x86_64/geeqie/) (image viewer)
 - [xorg-xev](https://archlinux.org/packages/extra/x86_64/xorg-xev/) (print contents of X events)
 - [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
+- [p7zip](https://wiki.archlinux.org/title/p7zip) (extracting .zip files)
 - [mlocate](https://wiki.archlinux.org/title/locate) (find files)
 - [rsync](https://wiki.archlinux.org/title/rsync) (copy/move files showing progress bar)
 - [fzf](https://wiki.archlinux.org/title/fzf) (find files)
@@ -428,6 +429,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
 - [mysql](https://wiki.archlinux.org/title/MySQL) (RDBMS. In arch linux mysql fork (mariadb) will be installed by default). Important: follow the installation and configuration instructions in [mariadb](https://wiki.archlinux.org/title/MariaDB). 
 - [mysql-workbench](https://archlinux.org/packages/?name=mysql-workbench) (Graphical interface mysql tool). If there is an error connecting with mariadb at setting root passwords, install [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring)
+- [virtualbox](https://wiki.archlinux.org/title/VirtualBox) (Virtualmachine hypervisor)
 
 _PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
 
