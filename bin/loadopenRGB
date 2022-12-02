@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#CONSIDERATIONS:
+#Run just "openrgb --color XXXXXX". If this does not work try "openrgb --device "Device" --color XXXXXX"
+#(To list available device run "openrgb -l")
+
 #pink
 #openrgb --device "MSI 3-Zone Keyboard" --color FF00EE
 
@@ -23,6 +27,9 @@ openrgb --device "MSI 3-Zone Keyboard" --color 00FFFF
 
 #white
 #openrgb --device "MSI 3-Zone Keyboard" --color FFFFFF
+
+
+
 
 
 
