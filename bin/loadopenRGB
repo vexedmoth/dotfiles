@@ -1,28 +1,28 @@
 #!/bin/bash
 
 #pink
-#openrgb -c FF00EE
+#openrgb --device "MSI 3-Zone Keyboard" --color FF00EE
 
 #purple
-#openrgb -c 5500FF
+#openrgb --device "MSI 3-Zone Keyboard" --color 5500FF
 
 #blue
-openrgb -c 0000FF
+#openrgb --device "MSI 3-Zone Keyboard" --color 0000FF
 
 #red
-#openrgb -c FF0000
+#openrgb --device "MSI 3-Zone Keyboard" --color FF0000
 
 #green
-#openrgb -c 00FF00
+#openrgb --device "MSI 3-Zone Keyboard" --color 00FF00
 
 #cian
-#openrgb -c 00FFFF
+openrgb --device "MSI 3-Zone Keyboard" --color 00FFFF
 
 #yellow
-#openrgb -c FFFF00
+#openrgb --device "MSI 3-Zone Keyboard" --color FFFF00
 
 #white
-#openrgb -c FFFFFF
+#openrgb --device "MSI 3-Zone Keyboard" --color FFFFFF
 
 
 
