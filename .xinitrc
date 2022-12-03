@@ -47,7 +47,7 @@ fi
 
 # My config
 
-feh --no-fehbg --bg-fill ~/Wallpapers/archsimple.png &
+feh --no-fehbg --bg-fill ~/Wallpapers/Sakura.png &
 
 picom &
 
