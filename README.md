@@ -425,6 +425,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [runjs-bin](https://aur.archlinux.org/packages/runjs-bin) (js playground)
 - [libreoffice-fresh](https://wiki.archlinux.org/title/LibreOffice) (open source office app)
 - [drawio-desktop](https://aur.archlinux.org/packages/drawio-desktop) (diagram drawing app)
+- [staruml](https://aur.archlinux.org/packages/staruml) (UML software modeler)
 - [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) (todoist app)
 - [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
 - [mysql](https://wiki.archlinux.org/title/MySQL) (RDBMS. In arch linux mysql fork (mariadb) will be installed by default). Important: follow the installation and configuration instructions in [mariadb](https://wiki.archlinux.org/title/MariaDB). 
