@@ -449,6 +449,9 @@ sudo fc-cache -f -v
 
 
 
+## Add Nano config
+Paste `.nanorc` file in `~/`
+
 
 
 
