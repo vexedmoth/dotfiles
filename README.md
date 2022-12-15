@@ -483,11 +483,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 - [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 
-6. Install PowerLevel10k theme for Oh My Zsh
+6. Install Starship
 ```zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+curl -sS https://starship.rs/install.sh | sh
 ```
-7. Paste `.p10k.zsh` and `.zshrc` in `~/`
+7. Paste `.zshrc` in `~/`
 
 8. Set zsh in root by creating symbolic links. In vexedmoth user run:
 ```zsh
