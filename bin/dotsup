@@ -32,11 +32,11 @@ do
             cp -r $HOME/.config/ranger $DOTFILES_PATH/.config
             cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
             cp -r $HOME/.config/betterlockscreenrc $DOTFILES_PATH/.config
+            cp -r $HOME/.config/starship.toml $DOTFILES_PATH/.config
 
             #Update rest of the files
             cp -r $HOME/.local/bin $DOTFILES_PATH
             cp -r /usr/share/fonts $DOTFILES_PATH
-            cp -r $HOME/.p10k.zsh $DOTFILES_PATH
             cp -r $HOME/.zshrc $DOTFILES_PATH
             cp -r $HOME/.xinitrc $DOTFILES_PATH
             cp -r $HOME/.nanorc $DOTFILES_PATH
