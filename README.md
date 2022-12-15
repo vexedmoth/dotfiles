@@ -455,7 +455,7 @@ Paste `.nanorc` file in `~/`
 
 
 
-## Terminal config (zsh + Oh My Zsh + p10k)
+## Terminal config (zsh + Oh My Zsh + Starship)
 
 1. Paste `alacritty` directory in `~/.config/` to apply color configuration
 
@@ -487,7 +487,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```zsh
 curl -sS https://starship.rs/install.sh | sh
 ```
-7. Paste `.zshrc` in `~/`
+7. Paste `.zshrc` in `~/` and `starship.toml` file in `~/.config`
 
 8. Set zsh in root by creating symbolic links. In vexedmoth user run:
 ```zsh
@@ -497,7 +497,7 @@ ln -s ~/.zshrc  /root/.zshrc
 ln -s ~/.oh-my-zsh  /root/.oh-my-zsh
 ```
 ```zsh
-ln -s ~/.p10k.zsh  /root/.p10k.zsh
+ln -s ~/.config/starship.toml  /root/.config/starship.toml
 ```
 Then in root run:
 ```zsh
