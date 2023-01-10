@@ -5,10 +5,10 @@
 #(To list available device run "openrgb -l")
 
 #pink
-openrgb --device "MSI 3-Zone Keyboard" --color FF00EE
+#openrgb --device "MSI 3-Zone Keyboard" --color FF00EE
 
 #purple
-#openrgb --device "MSI 3-Zone Keyboard" --color 5500FF
+openrgb --device "MSI 3-Zone Keyboard" --color 5500FF
 
 #blue
 #openrgb --device "MSI 3-Zone Keyboard" --color 0000FF
