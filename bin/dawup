@@ -27,6 +27,8 @@ do
             cp -r $HOME/DAW/Marcas $DOCUMENTS_PATH
             cp -r $HOME/DAW/Programacion $DOCUMENTS_PATH
             cp -r $HOME/DAW/Sistemas $DOCUMENTS_PATH
+            cp -r $HOME/DAW/FOL $DOCUMENTS_PATH
+
 
 
             #Add commit and push
