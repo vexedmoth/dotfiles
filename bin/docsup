@@ -28,6 +28,7 @@ do
             cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
             cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
+	    cp -r $HOME/Documents/Obsidian\ Vault $DOCUMENTS_PATH
 
 
             #Add commit and push
