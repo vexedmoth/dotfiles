@@ -430,6 +430,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [obsidian](https://archlinux.org/packages/community/x86_64/obsidian/) (markdown app)
 - [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
 - [mysql](https://wiki.archlinux.org/title/MySQL) (RDBMS. In arch linux mysql fork (mariadb) will be installed by default). Important: follow the installation and configuration instructions in [mariadb](https://wiki.archlinux.org/title/MariaDB). 
+- [mariadb-jdbc](https://aur.archlinux.org/packages/mariadb-jdbc) (MariaDB Connector/J - Java library to connect to MariaDB and MySQL)
 - [mysql-workbench](https://archlinux.org/packages/?name=mysql-workbench) (Graphical interface mysql tool). If there is an error connecting with mariadb at setting root passwords, install [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring)
 - [virtualbox](https://wiki.archlinux.org/title/VirtualBox) (Virtualmachine hypervisor)
 - [mons](https://github.com/Ventto/mons) (Multiscreen script using xrandr)
