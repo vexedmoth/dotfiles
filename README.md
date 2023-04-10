@@ -437,6 +437,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [filezilla](https://archlinux.org/packages/community/x86_64/filezilla/) (FTP protocol transfer)
 - [clamav](https://wiki.archlinux.org/title/ClamAV) (Open source Linux based antivirus scanner)
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
+- [how2](https://github.com/santinic/how2) (AI for your Terminal)
 
 _PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
 
