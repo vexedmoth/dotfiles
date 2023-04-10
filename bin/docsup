@@ -18,8 +18,8 @@ do
             #Pull every change from GitHub
             git -C $DOCUMENTS_PATH pull
 
-            #Delete all files from "documents" dir except "WebFundamentals", "bookmarks.html" and ".git"
-            find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune -or -name 'WebFundamentals' -prune -or -name 'bookmarks.html' \) -exec rm -rf '{}' \;
+            #Delete all files from "documents" dir except "WebFundamentals", "bookmarks.html", ".git" and ".gitignore"
+            find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune -or -name '.gitignore' -prune -or -name 'WebFundamentals' -prune -or -name 'bookmarks.html' \) -exec rm -rf '{}' \;
 
             #Update
             cp -r $HOME/Wallpapers $DOCUMENTS_PATH
@@ -28,7 +28,7 @@ do
             cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
             cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
-	    cp -r $HOME/Documents/Obsidian\ Vault $DOCUMENTS_PATH
+	        cp -r $HOME/Documents/Obsidian\ Vault $DOCUMENTS_PATH
 
 
             #Add commit and push
