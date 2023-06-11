@@ -17,32 +17,30 @@ font:
     style: Bold
 
 colors:
-  # Default colors
+  name: Nucolors
+  author: ""
   primary:
-    background: "0x0f101a"
-    foreground: "0xEAEAEA"
+    background: "#000000"
+    foreground: "#ffffff"
   cursor:
-    text: "0x000000"
-    cursor: "0xc5c9de"
-
-  # Normal colors
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    black: "0x181a29"
-    red: "0xF07178"
-    green: "0xcdea9f"
-    yellow: "0xffd47e"
-    blue: "0x93bbff"
-    magenta: "0xd3a7ee"
-    cyan: "0x98e4ff"
-    white: "0xbfd5de"
-
-  # Bright colors
+    black: "#393939"
+    red: "#ff9f95"
+    green: "#e2ffc7"
+    yellow: "#ffffb9"
+    blue: "#a8ceea"
+    magenta: "#e2b5cc"
+    cyan: "#c2efff"
+    white: "#dddddd"
   bright:
-    black: "0x4F505E"
-    red: "0xeb7f84"
-    green: "0xe0ffad"
-    yellow: "0xffee7e"
-    blue: "0xa3c5ff"
-    magenta: "0xd6afed"
-    cyan: "0x98fffd"
-    white: "0xd1e5ed"
+    black: "#474747"
+    red: "#ff8d80"
+    green: "#dbffb3"
+    yellow: "#ffbe64"
+    blue: "#7eb6ff"
+    magenta: "#e296ff"
+    cyan: "#9ce9ff"
+    white: "#dddddd"
+theme: Nucolors
