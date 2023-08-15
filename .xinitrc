@@ -47,7 +47,7 @@ fi
 
 # My config
 
-feh --no-fehbg --bg-fill ~/Wallpapers/arq1.jpg &
+feh --no-fehbg --bg-fill ~/Wallpapers/cyberpunk.jpg &
 
 picom &
 
