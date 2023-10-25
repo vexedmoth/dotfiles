@@ -33,6 +33,7 @@ do
             cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
             cp -r $HOME/.config/betterlockscreenrc $DOTFILES_PATH/.config
             cp -r $HOME/.config/starship.toml $DOTFILES_PATH/.config
+            cp -r $HOME/.config/zathura $DOTFILES_PATH/.config
 
             #Update rest of the files
             cp -r $HOME/.local/bin $DOTFILES_PATH
