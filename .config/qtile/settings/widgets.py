@@ -215,10 +215,10 @@ primary_widgets = [
 
     separator(),
 
-    widget.PulseVolume(
-        update_interval=0.01, 
-        **base(fg='light', bg='dark')
-    ),
+    # widget.PulseVolume(
+    #     update_interval=0.01, 
+    #     **base(fg='light', bg='dark')
+    # ),
 
     # ------Battery------
 

@@ -30,7 +30,6 @@ do
             cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
 	        cp -r $HOME/Documents/Obsidian\ Vault $DOCUMENTS_PATH
 
-
             #Add commit and push
             git -C $DOCUMENTS_PATH add .
             git -C $DOCUMENTS_PATH commit -m "update documents"
