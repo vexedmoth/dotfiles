@@ -71,13 +71,23 @@ Then check if wifi interface is connected
 nmcli connection
 ```
 
+If not turn on radio wifi
+```zsh
+nmcli radio wifi on
+```
+
 If it is connected, then connect to wifi
 ```zsh
 nmcli device wifi list
 ```
+
+```zsh
+sudo nmcli device wifi connect ssid_name password network-password
+```
+
 2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
 3. Install propietary [Nvidia Drivers](https://wiki.archlinux.org/title/NVIDIA) as graphics driver
-4. Install [qtile](https://wiki.archlinux.org/title/Qtile) as DE/WM
+4. Install [hyprland](https://wiki.archlinux.org/title/Hyprland) as DE/WM
 5. Install [alacritty](https://github.com/alacritty/alacritty) as the main terminal emulator
 6. Install [git](https://wiki.archlinux.org/title/git) as version control system
 
@@ -169,6 +179,9 @@ sudo update-grub
 
 
 ## Enable Touchpad Tap
+
+*By default Wayland enables touchpad. This is just needed for X11:*
+
 Check if [libinput](https://wiki.archlinux.org/title/libinput) is installed in our system. If not, install it.
 
 List devices and check if touchpad is listed. 
@@ -189,26 +202,6 @@ Driver "libinput"
 EndSection
 ```
 Reboot the system. 
-
-
-
-
-
-## Configure login manager
-If we want to start the system through the terminal without a login manager, we need to uninstall these packages:
-- [lightdm](https://wiki.archlinux.org/title/LightDM) (login manager by default after installation)
-- [lightdm-gtk-greeter](https://archlinux.org/packages/?name=lightdm-gtk-greeter) (default GUI that prompts the user for credentials)
-
-After that we need to paste the [xinit](https://wiki.archlinux.org/title/xinit) file `.xinitrc` from this repo in home directory `~/`. Xinit program allows to start a Xorg display server and will be executed only when there is no login manager running.
-
-**WARNING**
-
-1. Before reboot or poweroff the system, go to the last lines of the `.xinitrc` file (after # My config) and check which programs will be executed in the background (&). To avoid boot problems is recommended comment out those programs that we have not yet installed (when install them later remember to uncomment)
-
-2. After reboot and logging in, we need to start our graphical environment (X) by running (type this after each booting is temporary until we set up zsh configuration later): 
-```zsh
-startx
-```
 
 
 
@@ -376,21 +369,6 @@ sudo systemctl stop bluetooth.service
 _We can check if the service is enabled/disabled by running:_
 ```zsh
 systemctl status bluetooth.service
-```
-
-
-
-
-
-
-## Change GTK theme and icons
-By default, the [GTK](https://wiki.archlinux.org/title/GTK) theme and icons is Adwaita. Let's change it:
-
-1. Install [materia-gtk-theme](https://archlinux.org/packages/?name=materia-gtk-theme) GTK theme and [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/) GTK icons. (By default, themes will be stored automatically after installation in `/usr/share/themes` and icons in `/usr/share/icons`)
-2. Install [lxappearance](https://archlinux.org/packages/community/x86_64/lxappearance/) (GTK theme/icon switcher)
-3. Run it and change it manually with a GUI
-```zsh
-lxappearance
 ```
 
 
