@@ -37,7 +37,7 @@ Follow the [installation guide](https://wiki.archlinux.org/title/installation_gu
 
 Right after a complete and basic Arch based distro installation, follow the steps below:
 
-1. Configure [iwd](https://wiki.archlinux.org/title/iwd). It's a wireless daemon that can work with either [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). In this case, I prefer running a system daemon like systemd-networkd to manage networks. To start the client program run:
+1. Configure [iwd](https://wiki.archlinux.org/title/iwd). It's a wireless daemon that can work with either [systemd-networkd](https://wiki.archlinux.org/title/Systemd-networkd) or [NetworkManager](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend). 
 ```zsh
 iwctl
 ```
@@ -54,6 +54,26 @@ Then, connect to the desired network and after that check if we are connected
 ```zsh
 [iwd]# station wlan0 connect MY_NETWORK
 [iwd]# station wlan0 show
+```
+Right after, enable systemd-networkd, systemd-resolved and NetworkManager
+```zsh
+sudo systemctl enable systemd-networkd
+sudo systemctl start systemd-networkd
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
+```
+Reboot system
+
+Then check if wifi interface is connected
+```zsh
+nmcli connection
+```
+
+If it is connected, then connect to wifi
+```zsh
+nmcli device wifi list
 ```
 2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
 3. Install propietary [Nvidia Drivers](https://wiki.archlinux.org/title/NVIDIA) as graphics driver
