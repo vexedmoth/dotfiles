@@ -407,7 +407,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [exa](https://archlinux.org/packages/community/x86_64/exa/) (ls with steroids).
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
 - [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
-- [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzug](https://archlinux.org/packages/community/x86_64/ueberzug/) (preview images for ranger) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
+- [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzugpp](https://aur.archlinux.org/packages/ueberzugpp) (preview images for ranger in Wayland) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
 - [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
