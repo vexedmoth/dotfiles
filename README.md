@@ -309,6 +309,8 @@ _(If enabling and starting the service does not work, reboot system)_
 ## Enable Bluetooth service
 In order to add bluetooth devices such as keyboard or headsets, we will need to install and enable a bluetooth service. In my case, we just want to add a bluetooth headset. Follow the steps below:
 
+**Option 1 (without bluetooth manager)**
+
 1. Install [bluez](https://archlinux.org/packages/extra/x86_64/bluez/) package to provide Bluetooth protocol to our system and [bluez-utils](https://archlinux.org/packages/extra/x86_64/bluez-utils/) package to provide bluetoothctl utility.
 2. Make sure btusb kernel module is loaded
 ```zsh
@@ -371,7 +373,11 @@ _We can check if the service is enabled/disabled by running:_
 systemctl status bluetooth.service
 ```
 
+**Option 2 (using bluetooth manager)**
 
+1. Follow the steps of the previous option
+2. Install [blueman](https://wiki.archlinux.org/title/Blueman)
+3. Run it from launcher (rofi)
 
 
 
