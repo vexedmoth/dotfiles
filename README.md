@@ -398,7 +398,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [python-iwlib](https://archlinux.org/packages/community/x86_64/python-iwlib/) (python module for iwlib)
 - [python-dbus-next](https://archlinux.org/packages/community/any/python-dbus-next/) (python dbus library)
 - [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
-- [scrot](https://wiki.archlinux.org/title/Screen_capture) (screenshots)
+- [grim](https://wiki.archlinux.org/title/Screen_capture) and [slurp](https://wiki.archlinux.org/title/Screen_capture#Wayland) (screenshots)
 - [nvm](https://aur.archlinux.org/packages/nvm) (Node Version Manager)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
 - [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
