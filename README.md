@@ -417,6 +417,7 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
 - [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
 - [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzugpp](https://aur.archlinux.org/packages/ueberzugpp) (preview images for ranger in Wayland) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
+- [thunar](https://wiki.archlinux.org/title/thunar) (file manager)
 - [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
@@ -445,6 +446,8 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [clamav](https://wiki.archlinux.org/title/ClamAV) (Open source Linux based antivirus scanner)
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
 - [how2](https://github.com/santinic/how2) (AI for Unix Terminal. It's "man" command with steroids)
+
+
 
 _PD: almost all packages can be installed with pacman package manager. Few of them with paru from AUR and even manually from github_
 
