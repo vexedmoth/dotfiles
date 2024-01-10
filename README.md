@@ -235,6 +235,9 @@ _PD: The commented lines are the default setting_
 
 
 ## Enable lock screen after suspend
+
+**Option 1 (X11 server)**
+
 1. Install [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) package. 
 2. Paste `betterlockscreenrc` from this repo into `~/.config/`
 3. Link a lock wallpaper by doing
@@ -265,8 +268,8 @@ sudo systemctl start betterlockscreen@vexedmoth.service
 ```
 _(If enabling and starting the service does not work, reboot system)_
 
-
-
+**Option 2 (Wayland server)**
+1. Install [waylock](https://github.com/ifreund/waylock) and [swayidle](https://github.com/swaywm/swayidle):
 
 
 
