@@ -388,16 +388,9 @@ systemctl status bluetooth.service
 ## Packages
 Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. So in this case, before paste qtile config from this repo into our new system config, or basically before doing something else, we need to install the following basic main packages:  
 
-- [pacman-contrib](https://archlinux.org/packages/community/x86_64/pacman-contrib/) (pacman tools and scripts)
 - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
 - [acpi](https://wiki.archlinux.org/title/ACPI_modules) (monitoring applications like battery, fans and thermal)
-- [lm_sensors](https://wiki.archlinux.org/title/lm_sensors) (provides tools and drivers for monitoring temperatures, voltage, and fans)
-- [python-pip](https://archlinux.org/packages/extra/any/python-pip/) (install python packages)
-- [python-psutil](https://archlinux.org/packages/community/x86_64/python-psutil/) (system utilities module for Python)
-- [python-iwlib](https://archlinux.org/packages/community/x86_64/python-iwlib/) (python module for iwlib)
-- [python-dbus-next](https://archlinux.org/packages/community/any/python-dbus-next/) (python dbus library)
-- [nvidia-settings](https://wiki.archlinux.org/title/NVIDIA) (nvidia settings control)
 - [grim](https://wiki.archlinux.org/title/Screen_capture) and [slurp](https://wiki.archlinux.org/title/Screen_capture#Wayland) (screenshots)
 - [nvm](https://aur.archlinux.org/packages/nvm) (Node Version Manager)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
