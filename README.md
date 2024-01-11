@@ -395,11 +395,9 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [nvm](https://aur.archlinux.org/packages/nvm) (Node Version Manager)
 - [trash-cli](https://github.com/andreafrancia/trash-cli) (trash management)
 - [udiskie](https://wiki.archlinux.org/title/udisks) (udisks2 automounter)
-- [feh](https://wiki.archlinux.org/title/feh) (set wallpaper) 
 - [zathura](https://wiki.archlinux.org/title/zathura) (pdf document viewer) and [zathura-pdf-poppler](https://archlinux.org/packages/?name=zathura-pdf-poppler) (dependency)
 - [mpv](https://wiki.archlinux.org/title/mpv) (videoplayer)
 - [geeqie](https://archlinux.org/packages/extra/x86_64/geeqie/) (image viewer)
-- [xorg-xev](https://archlinux.org/packages/extra/x86_64/xorg-xev/) (print contents of X events)
 - [unzip](https://archlinux.org/packages/extra/x86_64/unzip/) (extracting .zip files)
 - [p7zip](https://wiki.archlinux.org/title/p7zip) (extracting .zip files)
 - [mlocate](https://wiki.archlinux.org/title/locate) (find files)
@@ -411,7 +409,6 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
 - [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzugpp](https://aur.archlinux.org/packages/ueberzugpp) (preview images for ranger in Wayland) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
 - [thunar](https://wiki.archlinux.org/title/thunar) (file manager)
-- [picom](https://wiki.archlinux.org/title/Picom) (compositor for Xorg). **Paste `picom` directory in `~/.config/`**
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
 - [btop](https://archlinux.org/packages/community/x86_64/btop/) (htop with steroids). **Paste `btop` directory in `~/.config/`**
 - [neofetch](https://archlinux.org/packages/community/any/neofetch/) (BTW I use Arch).  **Paste `neofetch` directory in `~/.config/`**
@@ -429,12 +426,11 @@ Certain configs like Qtile or xinit need some packages to work correctly. For in
 - [staruml](https://aur.archlinux.org/packages/staruml) (UML software modeler)
 - [elementary-planner](https://aur.archlinux.org/packages/elementary-planner) (offline todoist app)
 - [obsidian](https://archlinux.org/packages/community/x86_64/obsidian/) (markdown app)
-- [redshift](https://wiki.archlinux.org/title/redshift) (color temperature adjustment)
+- [gammastep](https://wiki.archlinux.org/title/gammastep) (color temperature adjustment for Wayland)
 - [mysql](https://wiki.archlinux.org/title/MySQL) (RDBMS. In arch linux mysql fork (mariadb) will be installed by default). Important: follow the installation and configuration instructions in [mariadb](https://wiki.archlinux.org/title/MariaDB). 
 - [mariadb-jdbc](https://aur.archlinux.org/packages/mariadb-jdbc) (MariaDB Connector/J - Java library to connect to MariaDB and MySQL)
 - [mysql-workbench](https://archlinux.org/packages/?name=mysql-workbench) (Graphical interface mysql tool). If there is an error connecting with mariadb at setting root passwords, install [gnome-keyring](https://wiki.archlinux.org/title/GNOME/Keyring)
 - [virtualbox](https://wiki.archlinux.org/title/VirtualBox) (Virtualmachine hypervisor)
-- [mons](https://github.com/Ventto/mons) (Multiscreen script using xrandr)
 - [filezilla](https://archlinux.org/packages/community/x86_64/filezilla/) (FTP protocol transfer)
 - [clamav](https://wiki.archlinux.org/title/ClamAV) (Open source Linux based antivirus scanner)
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
