@@ -273,7 +273,6 @@ _(If enabling and starting the service does not work, reboot system)_
 
 
 ## Load openRGB keys after suspend
-RGB keys will automatically init at the background at system boot (already set in `xinitrc` file). But after suspend the color switch to default (red). We want to avoid this and load the same color always.  
 1. Install [openrgb-bin](https://aur.archlinux.org/packages/openrgb-bin) package
 2. Create a file named `openRGB@.service` into `/etc/systemd/system/` and add this lines:
 ```
@@ -289,14 +288,8 @@ ExecStart=/home/vexedmoth/.local/bin/loadopenRGB
 [Install]
 WantedBy=suspend.target
 ```
-3. Add script binaries to PATH in `.bashrc` in order to run `loadopenRGB` script (this will be temporary until we set up zsh configuration later).
-```zsh
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-```
 
-4. Enable and start that service
+3. Enable and start that service
 ```zsh
 sudo systemctl enable openRGB@vexedmoth.service
 sudo systemctl start openRGB@vexedmoth.service
