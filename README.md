@@ -16,8 +16,7 @@
 ```
 
 
-![DE1](Screenshots/DE1.png)
-![DE1](Screenshots/DE2.png)
+![DE1](Screenshots/DE.png)
 
 
 
