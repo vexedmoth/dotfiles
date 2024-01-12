@@ -385,7 +385,7 @@ systemctl status bluetooth.service
 
 
 ## Packages
-Certain configs like Qtile or xinit need some packages to work correctly. For instance the volume keyboard control is configured by Qtile, and Qtile uses pamixer binary. So in this case, before paste qtile config from this repo into our new system config, or basically before doing something else, we need to install the following basic main packages:  
+Some interesting packages: 
 
 - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/) (control brightness)
 - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) (control volume)
@@ -508,16 +508,6 @@ Then in root run:
 chsh -s /bin/zsh root
 ```
 
-
-
-
-
-
-
-## Add Qtile config
-Paste `qtile` directory in `~/.config/`
-
-Finally, make sure everything is working properly (remember to uncomment the last lines of `.xinitrc`).
 
 GL & HF!
 
