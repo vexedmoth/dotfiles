@@ -30,9 +30,9 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 
-# Run X session (startx) after login in
+# Run Hyprland after login in
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  exec Hyprland &> /dev/null
 fi
 
 # Bindkeys and aliases

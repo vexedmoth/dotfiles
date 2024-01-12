@@ -1,0 +1,132 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "modules-left": [
+    "custom/archlogo",
+    "clock",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/updates",
+    "network",
+    "temperature",
+    "cpu",
+    "memory",
+    "backlight",
+    "pulseaudio",
+    "battery"
+  ],
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) - Brave": "🌎 $1"
+    }
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "{: %H:%M   %d/%m/%Y}"
+    //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "custom/archlogo": {
+    "format": " "
+  },
+
+  "custom/updates": {
+    "format": "<span color='#d60000'>{icon}</span> ",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": "<span color='#d60000'>  <i>Out of date</i></span>",
+      "updated": "<span color='#1db954'>  <i>Up to date</i></span>"
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+  },
+
+  "backlight": {
+    "tooltip": false,
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "max-length": 5
+  },
+
+  "memory": {
+    "tooltip": false,
+    "interval": 10,
+    "format": " {used:0.1f}GB",
+    "max-length": 8
+  },
+
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 5
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+
+  "pulseaudio": {
+    "format": "󰕾 {volume}%",
+    "tooltip": false,
+    "format-muted": "󰖁 Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5"
+  },
+
+  "temperature": {
+    "tooltip": false,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+    "format": " {temperatureC}°C",
+    "interval": 10,
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C"
+  },
+
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈁 {ipaddr}/{cidr}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "󰖪 ",
+    "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+  }
+}
