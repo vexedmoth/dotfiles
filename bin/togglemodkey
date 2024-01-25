@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Specify the file path
+config_file="/home/vexedmoth/.config/hypr/binds.conf"
+
+# Toggle between "ALT" and "SUPER"
+current_mod=$(grep '^$mod' "$config_file" | awk '{print $3}')
+new_mod=""
+
+if [ "$current_mod" == "ALT" ]; then
+    new_mod="SUPER"
+else
+    new_mod="ALT"
+fi
+
+# Use sed to replace the line
+sed -i "s/^\$mod = $current_mod/\$mod = $new_mod/" "$config_file"
+
+echo "Toggled mod key from $current_mod to $new_mod"
+
+

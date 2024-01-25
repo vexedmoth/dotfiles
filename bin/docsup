@@ -27,8 +27,7 @@ do
             cp -r $HOME/Documents/Learn $DOCUMENTS_PATH
             cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
-            cp -r $HOME/Documents/HojadeRuta.odt $DOCUMENTS_PATH
-	        cp -r $HOME/Documents/Obsidian\ Vault $DOCUMENTS_PATH
+	    cp -r $HOME/Documents/Obsidian $DOCUMENTS_PATH
 
             #Add commit and push
             git -C $DOCUMENTS_PATH add .

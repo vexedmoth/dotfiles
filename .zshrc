@@ -49,3 +49,5 @@ alias l.='exa -a | egrep "^\."'
 
 
 eval "$(starship init zsh)"
+
+
