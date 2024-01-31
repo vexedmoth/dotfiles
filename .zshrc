@@ -16,6 +16,7 @@ plugins=(
 )
 
 # Read and execute oh-my-zsh start script
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # Read and execute nvm start script to run nvm. 
