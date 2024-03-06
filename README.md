@@ -427,6 +427,7 @@ Some interesting packages:
 - [clamav](https://wiki.archlinux.org/title/ClamAV) (Open source Linux based antivirus scanner)
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
 - [nvchad](https://nvchad.com/) (nvim with steroids)
+- [spotube-bin](https://aur.archlinux.org/packages/spotube-bin) (open source spotify)
 
 
 
