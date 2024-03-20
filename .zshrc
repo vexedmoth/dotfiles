@@ -46,7 +46,6 @@ alias ls='exa -g --color=always --icons --group-directories-first'
 alias la='exa -a --color=always --icons --group-directories-first'   
 alias ll='exa -lg --color=always --icons --group-directories-first' 
 alias lla='exa -lag --color=always --icons --group-directories-first' 
-alias lt='exa -aT --color=always --icons --group-directories-first'    
 alias l.='exa -a | egrep "^\."'
 
 
