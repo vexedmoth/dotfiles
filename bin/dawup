@@ -22,8 +22,8 @@ do
             find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune \) -exec rm -rf '{}' \;
 
             #Update
-            cp -r $HOME/DAW/1_curso $DOCUMENTS_PATH
-            cp -r $HOME/DAW/2_curso $DOCUMENTS_PATH
+            cp -r $HOME/Documents/DAW/1_curso $DOCUMENTS_PATH
+            cp -r $HOME/Documents/DAW/2_curso $DOCUMENTS_PATH
 
 
 
