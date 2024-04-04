@@ -372,7 +372,7 @@ systemctl status bluetooth.service
 
 1. Follow the steps of the previous option
 2. Install [blueman](https://wiki.archlinux.org/title/Blueman)
-3. Run it from launcher (rofi)
+3. Run it from launcher (wofi)
 
 
 
@@ -398,7 +398,7 @@ Some interesting packages:
 - [bat](https://archlinux.org/packages/community/x86_64/bat/) (cat with steroids)
 - [exa](https://archlinux.org/packages/community/x86_64/exa/) (ls with steroids).
 - [neovim](https://wiki.archlinux.org/title/Neovim) (code editor)
-- [rofi](https://wiki.archlinux.org/title/Rofi) (dmenu). **Paste `rofi` directory in `~/.config/`**
+- [wofi](https://wiki.archlinux.org/title/wofi) (dmenu). **Paste `wofi` directory in `~/.config/`**
 - [ranger](https://wiki.archlinux.org/title/ranger) (file manager), [ueberzugpp](https://aur.archlinux.org/packages/ueberzugpp) (preview images for ranger in Wayland) and [poppler](https://archlinux.org/packages/extra/x86_64/poppler/) (preview pdf's for ranger). **Paste `ranger` directory in `~/.config/`**
 - [thunar](https://wiki.archlinux.org/title/thunar) (file manager)
 - [dunst](https://wiki.archlinux.org/title/Dunst) (notification daemon), [libnotify](https://archlinux.org/packages/extra/x86_64/libnotify/) (dependency for dunst). **Paste `dunst` directory in `~/.config/`**
