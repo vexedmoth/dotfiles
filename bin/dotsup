@@ -28,7 +28,7 @@ do
             cp -r $HOME/.config/dunst $DOTFILES_PATH/.config
             cp -r $HOME/.config/neofetch $DOTFILES_PATH/.config
             cp -r $HOME/.config/ranger $DOTFILES_PATH/.config
-            cp -r $HOME/.config/rofi $DOTFILES_PATH/.config
+            cp -r $HOME/.config/wofi $DOTFILES_PATH/.config
             cp -r $HOME/.config/starship.toml $DOTFILES_PATH/.config
             cp -r $HOME/.config/zathura $DOTFILES_PATH/.config
             cp -r $HOME/.config/hypr $DOTFILES_PATH/.config
