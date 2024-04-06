@@ -86,7 +86,7 @@ sudo nmcli device wifi connect ssid_name password network-password
 
 2. Install [pipewire](https://wiki.archlinux.org/title/PipeWire) as audio server
 3. Install propietary [Nvidia Drivers](https://wiki.archlinux.org/title/NVIDIA) as graphics driver
-4. Install [hyprland](https://wiki.archlinux.org/title/Hyprland) as DE/WM
+4. Install [hyprland](https://wiki.archlinux.org/title/Hyprland) as DE/WM with required packages (hyprpaper, hyprlock, hypridle)
 5. Install [alacritty](https://github.com/alacritty/alacritty) as the main terminal emulator
 6. Install [git](https://wiki.archlinux.org/title/git) as version control system
 
