@@ -22,12 +22,12 @@ do
             find $DOCUMENTS_PATH -mindepth 1 -not \( -name '.git' -prune -or -name '.gitignore' -prune -or -name 'WebFundamentals' -prune -or -name 'bookmarks.html' \) -exec rm -rf '{}' \;
 
             #Update
-            cp -r $HOME/Wallpapers $DOCUMENTS_PATH
+            cp -r $HOME/Documents/Wallpapers $DOCUMENTS_PATH
             cp -r $HOME/Documents/bit4 $DOCUMENTS_PATH
             cp -r $HOME/Documents/Learn $DOCUMENTS_PATH
             cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
-	    cp -r $HOME/Documents/Obsidian $DOCUMENTS_PATH
+            cp -r $HOME/Documents/DAW $DOCUMENTS_PATH
 
             #Add commit and push
             git -C $DOCUMENTS_PATH add .
