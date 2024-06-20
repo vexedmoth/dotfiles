@@ -34,7 +34,7 @@ do
             cp -r $HOME/.config/hypr $DOTFILES_PATH/.config
             cp -r $HOME/.config/gammastep $DOTFILES_PATH/.config
             cp -r $HOME/.config/waybar $DOTFILES_PATH/.config
-	    cp -r $HOME/.config/nvim $DOTFILES_PATH/.config
+	        cp -r $HOME/.config/nvim $DOTFILES_PATH/.config
 
             #Update rest of the files
             cp -r $HOME/.local/bin $DOTFILES_PATH
