@@ -249,7 +249,7 @@ betterlockscreen -u ~/Wallpapers/lockscreen.png
 [Unit]
 Description=Lock X session using betterlockscreen for user %i
 Before=sleep.target
-
+https://wiki.archlinux.org/title/GPGPU#CUDA
 [Service]
 User=%i
 Environment=DISPLAY=:0
@@ -428,7 +428,7 @@ Some interesting packages:
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
 - [nvchad](https://nvchad.com/) (nvim with steroids)
 - [spotube-bin](https://aur.archlinux.org/packages/spotube-bin) (open source spotify)
-- [cuda](https://wiki.archlinux.org/title/GPGPU#CUDA)
+- [cuda](https://wiki.archlinux.org/title/GPGPU#CUDA) componentes NVIDIA CUDA
 
 
 
