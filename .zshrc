@@ -22,6 +22,10 @@ source $ZSH/oh-my-zsh.sh
 # Read and execute nvm start script to run nvm. 
 source /usr/share/nvm/init-nvm.sh
 
+# Adding CUDA binaries to PATH
+export CUDA_PATH=/opt/cuda
+export PATH=$PATH:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin
+export NVCC_CCBIN='/usr/bin/g++-13'
 
 ################################# MY CONFIG ###################################
 
