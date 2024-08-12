@@ -428,6 +428,7 @@ Some interesting packages:
 - [syncthing](https://wiki.archlinux.org/title/syncthing) (Open-source file synchronization client/server application)
 - [nvchad](https://nvchad.com/) (nvim with steroids)
 - [spotube-bin](https://aur.archlinux.org/packages/spotube-bin) (open source spotify)
+- [cuda](https://wiki.archlinux.org/title/GPGPU#CUDA)
 
 
 
