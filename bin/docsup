@@ -25,7 +25,6 @@ do
             cp -r $HOME/Documents/Wallpapers $DOCUMENTS_PATH
             cp -r $HOME/Documents/bit4 $DOCUMENTS_PATH
             cp -r $HOME/Documents/Learn $DOCUMENTS_PATH
-            cp -r $HOME/Documents/Linux $DOCUMENTS_PATH
             cp -r $HOME/Documents/Proyectos $DOCUMENTS_PATH
             cp -r $HOME/Documents/DAW $DOCUMENTS_PATH
 
