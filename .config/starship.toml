@@ -9,6 +9,7 @@ $git_status\
 $cmd_duration\
 $line_break\
 $python\
+$conda\
 $character"""
 
 # Make prompt a single line instead of two lines
@@ -66,3 +67,7 @@ style = "yellow"
 # format = "[$virtualenv]($style) "
 # style = "bright-black"
 symbol = " "
+
+[conda]
+symbol = "🐍 "  # El símbolo distintivo que aparecerá cuando el entorno de conda esté activo.
+style = "bold green"  # Personaliza el color y estilo.
